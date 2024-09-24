@@ -1,0 +1,1152 @@
+Each Array has been listed out to know which is which
+
+//Array 1
+
+Call 1 to Quicksort called with Low = 0, High = 9
+Call to Partition returned pivotpoint = 4
+Call 2 to Quicksort called with Low = 0, High = 3
+Call to Partition returned pivotpoint = 3
+Call 3 to Quicksort called with Low = 0, High = 2
+Call to Partition returned pivotpoint = 0
+Call 4 to Quicksort called with Low = 0, High = -1
+Call 5 to Quicksort called with Low = 1, High = 2
+Call to Partition returned pivotpoint = 1
+Call 6 to Quicksort called with Low = 1, High = 0
+Call 7 to Quicksort called with Low = 2, High = 2
+Call 8 to Quicksort called with Low = 4, High = 3
+Call 9 to Quicksort called with Low = 5, High = 9
+Call to Partition returned pivotpoint = 7
+Call 10 to Quicksort called with Low = 5, High = 6
+Call to Partition returned pivotpoint = 5
+Call 11 to Quicksort called with Low = 5, High = 4
+Call 12 to Quicksort called with Low = 6, High = 6
+Call 13 to Quicksort called with Low = 8, High = 9
+Call to Partition returned pivotpoint = 8
+Call 14 to Quicksort called with Low = 8, High = 7
+Call 15 to Quicksort called with Low = 9, High = 9
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 
+Total Comparisons = 21
+Total Swaps = 16
+Time taken = 73 microseconds
+--------------------------------------------------------------------------------
+//Array 2
+
+Call 1 to Quicksort called with Low = 0, High = 9
+Call to Partition returned pivotpoint = 5
+Call 2 to Quicksort called with Low = 0, High = 4
+Call to Partition returned pivotpoint = 3
+Call 3 to Quicksort called with Low = 0, High = 2
+Call to Partition returned pivotpoint = 0
+Call 4 to Quicksort called with Low = 0, High = -1
+Call 5 to Quicksort called with Low = 1, High = 2
+Call to Partition returned pivotpoint = 2
+Call 6 to Quicksort called with Low = 1, High = 1
+Call 7 to Quicksort called with Low = 3, High = 2
+Call 8 to Quicksort called with Low = 4, High = 4
+Call 9 to Quicksort called with Low = 6, High = 9
+Call to Partition returned pivotpoint = 6
+Call 10 to Quicksort called with Low = 6, High = 5
+Call 11 to Quicksort called with Low = 7, High = 9
+Call to Partition returned pivotpoint = 8
+Call 12 to Quicksort called with Low = 7, High = 7
+Call 13 to Quicksort called with Low = 9, High = 9
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 
+Total Comparisons = 21
+Total Swaps = 16
+Time taken = 69 microseconds
+--------------------------------------------------------------------------------
+//Array 3
+
+Call 1 to Quicksort called with Low = 0, High = 9
+Call to Partition returned pivotpoint = 0
+Call 2 to Quicksort called with Low = 0, High = -1
+Call 3 to Quicksort called with Low = 1, High = 9
+Call to Partition returned pivotpoint = 1
+Call 4 to Quicksort called with Low = 1, High = 0
+Call 5 to Quicksort called with Low = 2, High = 9
+Call to Partition returned pivotpoint = 2
+Call 6 to Quicksort called with Low = 2, High = 1
+Call 7 to Quicksort called with Low = 3, High = 9
+Call to Partition returned pivotpoint = 3
+Call 8 to Quicksort called with Low = 3, High = 2
+Call 9 to Quicksort called with Low = 4, High = 9
+Call to Partition returned pivotpoint = 4
+Call 10 to Quicksort called with Low = 4, High = 3
+Call 11 to Quicksort called with Low = 5, High = 9
+Call to Partition returned pivotpoint = 5
+Call 12 to Quicksort called with Low = 5, High = 4
+Call 13 to Quicksort called with Low = 6, High = 9
+Call to Partition returned pivotpoint = 6
+Call 14 to Quicksort called with Low = 6, High = 5
+Call 15 to Quicksort called with Low = 7, High = 9
+Call to Partition returned pivotpoint = 7
+Call 16 to Quicksort called with Low = 7, High = 6
+Call 17 to Quicksort called with Low = 8, High = 9
+Call to Partition returned pivotpoint = 8
+Call 18 to Quicksort called with Low = 8, High = 7
+Call 19 to Quicksort called with Low = 9, High = 9
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 
+Total Comparisons = 45
+Total Swaps = 9
+Time taken = 57 microseconds
+--------------------------------------------------------------------------------
+Array 4
+
+Call 1 to Quicksort called with Low = 0, High = 9
+Call to Partition returned pivotpoint = 9
+Call 2 to Quicksort called with Low = 0, High = 8
+Call to Partition returned pivotpoint = 0
+Call 3 to Quicksort called with Low = 0, High = -1
+Call 4 to Quicksort called with Low = 1, High = 8
+Call to Partition returned pivotpoint = 8
+Call 5 to Quicksort called with Low = 1, High = 7
+Call to Partition returned pivotpoint = 1
+Call 6 to Quicksort called with Low = 1, High = 0
+Call 7 to Quicksort called with Low = 2, High = 7
+Call to Partition returned pivotpoint = 7
+Call 8 to Quicksort called with Low = 2, High = 6
+Call to Partition returned pivotpoint = 2
+Call 9 to Quicksort called with Low = 2, High = 1
+Call 10 to Quicksort called with Low = 3, High = 6
+Call to Partition returned pivotpoint = 6
+Call 11 to Quicksort called with Low = 3, High = 5
+Call to Partition returned pivotpoint = 3
+Call 12 to Quicksort called with Low = 3, High = 2
+Call 13 to Quicksort called with Low = 4, High = 5
+Call to Partition returned pivotpoint = 5
+Call 14 to Quicksort called with Low = 4, High = 4
+Call 15 to Quicksort called with Low = 6, High = 5
+Call 16 to Quicksort called with Low = 7, High = 6
+Call 17 to Quicksort called with Low = 8, High = 7
+Call 18 to Quicksort called with Low = 9, High = 8
+Call 19 to Quicksort called with Low = 10, High = 9
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 
+Total Comparisons = 45
+Total Swaps = 34
+Time taken = 29 microseconds
+--------------------------------------------------------------------------------
+//Array 5
+
+Call 1 to Quicksort called with Low = 0, High = 99
+Call to Partition returned pivotpoint = 13
+Call 2 to Quicksort called with Low = 0, High = 12
+Call to Partition returned pivotpoint = 11
+Call 3 to Quicksort called with Low = 0, High = 10
+Call to Partition returned pivotpoint = 4
+Call 4 to Quicksort called with Low = 0, High = 3
+Call to Partition returned pivotpoint = 0
+Call 5 to Quicksort called with Low = 0, High = -1
+Call 6 to Quicksort called with Low = 1, High = 3
+Call to Partition returned pivotpoint = 2
+Call 7 to Quicksort called with Low = 1, High = 1
+Call 8 to Quicksort called with Low = 3, High = 3
+Call 9 to Quicksort called with Low = 5, High = 10
+Call to Partition returned pivotpoint = 6
+Call 10 to Quicksort called with Low = 5, High = 5
+Call 11 to Quicksort called with Low = 7, High = 10
+Call to Partition returned pivotpoint = 10
+Call 12 to Quicksort called with Low = 7, High = 9
+Call to Partition returned pivotpoint = 8
+Call 13 to Quicksort called with Low = 7, High = 7
+Call 14 to Quicksort called with Low = 9, High = 9
+Call 15 to Quicksort called with Low = 11, High = 10
+Call 16 to Quicksort called with Low = 12, High = 12
+Call 17 to Quicksort called with Low = 14, High = 99
+Call to Partition returned pivotpoint = 50
+Call 18 to Quicksort called with Low = 14, High = 49
+Call to Partition returned pivotpoint = 29
+Call 19 to Quicksort called with Low = 14, High = 28
+Call to Partition returned pivotpoint = 27
+Call 20 to Quicksort called with Low = 14, High = 26
+Call to Partition returned pivotpoint = 22
+Call 21 to Quicksort called with Low = 14, High = 21
+Call to Partition returned pivotpoint = 16
+Call 22 to Quicksort called with Low = 14, High = 15
+Call to Partition returned pivotpoint = 15
+Call 23 to Quicksort called with Low = 14, High = 14
+Call 24 to Quicksort called with Low = 16, High = 15
+Call 25 to Quicksort called with Low = 17, High = 21
+Call to Partition returned pivotpoint = 18
+Call 26 to Quicksort called with Low = 17, High = 17
+Call 27 to Quicksort called with Low = 19, High = 21
+Call to Partition returned pivotpoint = 20
+Call 28 to Quicksort called with Low = 19, High = 19
+Call 29 to Quicksort called with Low = 21, High = 21
+Call 30 to Quicksort called with Low = 23, High = 26
+Call to Partition returned pivotpoint = 24
+Call 31 to Quicksort called with Low = 23, High = 23
+Call 32 to Quicksort called with Low = 25, High = 26
+Call to Partition returned pivotpoint = 26
+Call 33 to Quicksort called with Low = 25, High = 25
+Call 34 to Quicksort called with Low = 27, High = 26
+Call 35 to Quicksort called with Low = 28, High = 28
+Call 36 to Quicksort called with Low = 30, High = 49
+Call to Partition returned pivotpoint = 39
+Call 37 to Quicksort called with Low = 30, High = 38
+Call to Partition returned pivotpoint = 34
+Call 38 to Quicksort called with Low = 30, High = 33
+Call to Partition returned pivotpoint = 33
+Call 39 to Quicksort called with Low = 30, High = 32
+Call to Partition returned pivotpoint = 30
+Call 40 to Quicksort called with Low = 30, High = 29
+Call 41 to Quicksort called with Low = 31, High = 32
+Call to Partition returned pivotpoint = 31
+Call 42 to Quicksort called with Low = 31, High = 30
+Call 43 to Quicksort called with Low = 32, High = 32
+Call 44 to Quicksort called with Low = 34, High = 33
+Call 45 to Quicksort called with Low = 35, High = 38
+Call to Partition returned pivotpoint = 38
+Call 46 to Quicksort called with Low = 35, High = 37
+Call to Partition returned pivotpoint = 36
+Call 47 to Quicksort called with Low = 35, High = 35
+Call 48 to Quicksort called with Low = 37, High = 37
+Call 49 to Quicksort called with Low = 39, High = 38
+Call 50 to Quicksort called with Low = 40, High = 49
+Call to Partition returned pivotpoint = 42
+Call 51 to Quicksort called with Low = 40, High = 41
+Call to Partition returned pivotpoint = 40
+Call 52 to Quicksort called with Low = 40, High = 39
+Call 53 to Quicksort called with Low = 41, High = 41
+Call 54 to Quicksort called with Low = 43, High = 49
+Call to Partition returned pivotpoint = 48
+Call 55 to Quicksort called with Low = 43, High = 47
+Call to Partition returned pivotpoint = 45
+Call 56 to Quicksort called with Low = 43, High = 44
+Call to Partition returned pivotpoint = 43
+Call 57 to Quicksort called with Low = 43, High = 42
+Call 58 to Quicksort called with Low = 44, High = 44
+Call 59 to Quicksort called with Low = 46, High = 47
+Call to Partition returned pivotpoint = 46
+Call 60 to Quicksort called with Low = 46, High = 45
+Call 61 to Quicksort called with Low = 47, High = 47
+Call 62 to Quicksort called with Low = 49, High = 49
+Call 63 to Quicksort called with Low = 51, High = 99
+Call to Partition returned pivotpoint = 66
+Call 64 to Quicksort called with Low = 51, High = 65
+Call to Partition returned pivotpoint = 57
+Call 65 to Quicksort called with Low = 51, High = 56
+Call to Partition returned pivotpoint = 55
+Call 66 to Quicksort called with Low = 51, High = 54
+Call to Partition returned pivotpoint = 52
+Call 67 to Quicksort called with Low = 51, High = 51
+Call 68 to Quicksort called with Low = 53, High = 54
+Call to Partition returned pivotpoint = 53
+Call 69 to Quicksort called with Low = 53, High = 52
+Call 70 to Quicksort called with Low = 54, High = 54
+Call 71 to Quicksort called with Low = 56, High = 56
+Call 72 to Quicksort called with Low = 58, High = 65
+Call to Partition returned pivotpoint = 63
+Call 73 to Quicksort called with Low = 58, High = 62
+Call to Partition returned pivotpoint = 62
+Call 74 to Quicksort called with Low = 58, High = 61
+Call to Partition returned pivotpoint = 59
+Call 75 to Quicksort called with Low = 58, High = 58
+Call 76 to Quicksort called with Low = 60, High = 61
+Call to Partition returned pivotpoint = 60
+Call 77 to Quicksort called with Low = 60, High = 59
+Call 78 to Quicksort called with Low = 61, High = 61
+Call 79 to Quicksort called with Low = 63, High = 62
+Call 80 to Quicksort called with Low = 64, High = 65
+Call to Partition returned pivotpoint = 65
+Call 81 to Quicksort called with Low = 64, High = 64
+Call 82 to Quicksort called with Low = 66, High = 65
+Call 83 to Quicksort called with Low = 67, High = 99
+Call to Partition returned pivotpoint = 83
+Call 84 to Quicksort called with Low = 67, High = 82
+Call to Partition returned pivotpoint = 70
+Call 85 to Quicksort called with Low = 67, High = 69
+Call to Partition returned pivotpoint = 69
+Call 86 to Quicksort called with Low = 67, High = 68
+Call to Partition returned pivotpoint = 68
+Call 87 to Quicksort called with Low = 67, High = 67
+Call 88 to Quicksort called with Low = 69, High = 68
+Call 89 to Quicksort called with Low = 70, High = 69
+Call 90 to Quicksort called with Low = 71, High = 82
+Call to Partition returned pivotpoint = 82
+Call 91 to Quicksort called with Low = 71, High = 81
+Call to Partition returned pivotpoint = 73
+Call 92 to Quicksort called with Low = 71, High = 72
+Call to Partition returned pivotpoint = 71
+Call 93 to Quicksort called with Low = 71, High = 70
+Call 94 to Quicksort called with Low = 72, High = 72
+Call 95 to Quicksort called with Low = 74, High = 81
+Call to Partition returned pivotpoint = 74
+Call 96 to Quicksort called with Low = 74, High = 73
+Call 97 to Quicksort called with Low = 75, High = 81
+Call to Partition returned pivotpoint = 76
+Call 98 to Quicksort called with Low = 75, High = 75
+Call 99 to Quicksort called with Low = 77, High = 81
+Call to Partition returned pivotpoint = 77
+Call 100 to Quicksort called with Low = 77, High = 76
+Call 101 to Quicksort called with Low = 78, High = 81
+Call to Partition returned pivotpoint = 79
+Call 102 to Quicksort called with Low = 78, High = 78
+Call 103 to Quicksort called with Low = 80, High = 81
+Call to Partition returned pivotpoint = 81
+Call 104 to Quicksort called with Low = 80, High = 80
+Call 105 to Quicksort called with Low = 82, High = 81
+Call 106 to Quicksort called with Low = 83, High = 82
+Call 107 to Quicksort called with Low = 84, High = 99
+Call to Partition returned pivotpoint = 90
+Call 108 to Quicksort called with Low = 84, High = 89
+Call to Partition returned pivotpoint = 88
+Call 109 to Quicksort called with Low = 84, High = 87
+Call to Partition returned pivotpoint = 86
+Call 110 to Quicksort called with Low = 84, High = 85
+Call to Partition returned pivotpoint = 85
+Call 111 to Quicksort called with Low = 84, High = 84
+Call 112 to Quicksort called with Low = 86, High = 85
+Call 113 to Quicksort called with Low = 87, High = 87
+Call 114 to Quicksort called with Low = 89, High = 89
+Call 115 to Quicksort called with Low = 91, High = 99
+Call to Partition returned pivotpoint = 99
+Call 116 to Quicksort called with Low = 91, High = 98
+Call to Partition returned pivotpoint = 96
+Call 117 to Quicksort called with Low = 91, High = 95
+Call to Partition returned pivotpoint = 91
+Call 118 to Quicksort called with Low = 91, High = 90
+Call 119 to Quicksort called with Low = 92, High = 95
+Call to Partition returned pivotpoint = 93
+Call 120 to Quicksort called with Low = 92, High = 92
+Call 121 to Quicksort called with Low = 94, High = 95
+Call to Partition returned pivotpoint = 95
+Call 122 to Quicksort called with Low = 94, High = 94
+Call 123 to Quicksort called with Low = 96, High = 95
+Call 124 to Quicksort called with Low = 97, High = 98
+Call to Partition returned pivotpoint = 98
+Call 125 to Quicksort called with Low = 97, High = 97
+Call 126 to Quicksort called with Low = 99, High = 98
+Call 127 to Quicksort called with Low = 100, High = 99
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 
+Total Comparisons = 588
+Total Swaps = 309
+Time taken = 280 microseconds
+----------------------------------------------------------------------
+//Array 6
+
+Call 1 to Quicksort called with Low = 0, High = 99
+Call to Partition returned pivotpoint = 58
+Call 2 to Quicksort called with Low = 0, High = 57
+Call to Partition returned pivotpoint = 48
+Call 3 to Quicksort called with Low = 0, High = 47
+Call to Partition returned pivotpoint = 30
+Call 4 to Quicksort called with Low = 0, High = 29
+Call to Partition returned pivotpoint = 28
+Call 5 to Quicksort called with Low = 0, High = 27
+Call to Partition returned pivotpoint = 13
+Call 6 to Quicksort called with Low = 0, High = 12
+Call to Partition returned pivotpoint = 4
+Call 7 to Quicksort called with Low = 0, High = 3
+Call to Partition returned pivotpoint = 0
+Call 8 to Quicksort called with Low = 0, High = -1
+Call 9 to Quicksort called with Low = 1, High = 3
+Call to Partition returned pivotpoint = 2
+Call 10 to Quicksort called with Low = 1, High = 1
+Call 11 to Quicksort called with Low = 3, High = 3
+Call 12 to Quicksort called with Low = 5, High = 12
+Call to Partition returned pivotpoint = 9
+Call 13 to Quicksort called with Low = 5, High = 8
+Call to Partition returned pivotpoint = 6
+Call 14 to Quicksort called with Low = 5, High = 5
+Call 15 to Quicksort called with Low = 7, High = 8
+Call to Partition returned pivotpoint = 8
+Call 16 to Quicksort called with Low = 7, High = 7
+Call 17 to Quicksort called with Low = 9, High = 8
+Call 18 to Quicksort called with Low = 10, High = 12
+Call to Partition returned pivotpoint = 10
+Call 19 to Quicksort called with Low = 10, High = 9
+Call 20 to Quicksort called with Low = 11, High = 12
+Call to Partition returned pivotpoint = 12
+Call 21 to Quicksort called with Low = 11, High = 11
+Call 22 to Quicksort called with Low = 13, High = 12
+Call 23 to Quicksort called with Low = 14, High = 27
+Call to Partition returned pivotpoint = 19
+Call 24 to Quicksort called with Low = 14, High = 18
+Call to Partition returned pivotpoint = 14
+Call 25 to Quicksort called with Low = 14, High = 13
+Call 26 to Quicksort called with Low = 15, High = 18
+Call to Partition returned pivotpoint = 18
+Call 27 to Quicksort called with Low = 15, High = 17
+Call to Partition returned pivotpoint = 16
+Call 28 to Quicksort called with Low = 15, High = 15
+Call 29 to Quicksort called with Low = 17, High = 17
+Call 30 to Quicksort called with Low = 19, High = 18
+Call 31 to Quicksort called with Low = 20, High = 27
+Call to Partition returned pivotpoint = 20
+Call 32 to Quicksort called with Low = 20, High = 19
+Call 33 to Quicksort called with Low = 21, High = 27
+Call to Partition returned pivotpoint = 24
+Call 34 to Quicksort called with Low = 21, High = 23
+Call to Partition returned pivotpoint = 22
+Call 35 to Quicksort called with Low = 21, High = 21
+Call 36 to Quicksort called with Low = 23, High = 23
+Call 37 to Quicksort called with Low = 25, High = 27
+Call to Partition returned pivotpoint = 25
+Call 38 to Quicksort called with Low = 25, High = 24
+Call 39 to Quicksort called with Low = 26, High = 27
+Call to Partition returned pivotpoint = 27
+Call 40 to Quicksort called with Low = 26, High = 26
+Call 41 to Quicksort called with Low = 28, High = 27
+Call 42 to Quicksort called with Low = 29, High = 29
+Call 43 to Quicksort called with Low = 31, High = 47
+Call to Partition returned pivotpoint = 34
+Call 44 to Quicksort called with Low = 31, High = 33
+Call to Partition returned pivotpoint = 31
+Call 45 to Quicksort called with Low = 31, High = 30
+Call 46 to Quicksort called with Low = 32, High = 33
+Call to Partition returned pivotpoint = 33
+Call 47 to Quicksort called with Low = 32, High = 32
+Call 48 to Quicksort called with Low = 34, High = 33
+Call 49 to Quicksort called with Low = 35, High = 47
+Call to Partition returned pivotpoint = 35
+Call 50 to Quicksort called with Low = 35, High = 34
+Call 51 to Quicksort called with Low = 36, High = 47
+Call to Partition returned pivotpoint = 41
+Call 52 to Quicksort called with Low = 36, High = 40
+Call to Partition returned pivotpoint = 36
+Call 53 to Quicksort called with Low = 36, High = 35
+Call 54 to Quicksort called with Low = 37, High = 40
+Call to Partition returned pivotpoint = 37
+Call 55 to Quicksort called with Low = 37, High = 36
+Call 56 to Quicksort called with Low = 38, High = 40
+Call to Partition returned pivotpoint = 40
+Call 57 to Quicksort called with Low = 38, High = 39
+Call to Partition returned pivotpoint = 38
+Call 58 to Quicksort called with Low = 38, High = 37
+Call 59 to Quicksort called with Low = 39, High = 39
+Call 60 to Quicksort called with Low = 41, High = 40
+Call 61 to Quicksort called with Low = 42, High = 47
+Call to Partition returned pivotpoint = 47
+Call 62 to Quicksort called with Low = 42, High = 46
+Call to Partition returned pivotpoint = 44
+Call 63 to Quicksort called with Low = 42, High = 43
+Call to Partition returned pivotpoint = 42
+Call 64 to Quicksort called with Low = 42, High = 41
+Call 65 to Quicksort called with Low = 43, High = 43
+Call 66 to Quicksort called with Low = 45, High = 46
+Call to Partition returned pivotpoint = 45
+Call 67 to Quicksort called with Low = 45, High = 44
+Call 68 to Quicksort called with Low = 46, High = 46
+Call 69 to Quicksort called with Low = 48, High = 47
+Call 70 to Quicksort called with Low = 49, High = 57
+Call to Partition returned pivotpoint = 50
+Call 71 to Quicksort called with Low = 49, High = 49
+Call 72 to Quicksort called with Low = 51, High = 57
+Call to Partition returned pivotpoint = 57
+Call 73 to Quicksort called with Low = 51, High = 56
+Call to Partition returned pivotpoint = 54
+Call 74 to Quicksort called with Low = 51, High = 53
+Call to Partition returned pivotpoint = 53
+Call 75 to Quicksort called with Low = 51, High = 52
+Call to Partition returned pivotpoint = 51
+Call 76 to Quicksort called with Low = 51, High = 50
+Call 77 to Quicksort called with Low = 52, High = 52
+Call 78 to Quicksort called with Low = 54, High = 53
+Call 79 to Quicksort called with Low = 55, High = 56
+Call to Partition returned pivotpoint = 55
+Call 80 to Quicksort called with Low = 55, High = 54
+Call 81 to Quicksort called with Low = 56, High = 56
+Call 82 to Quicksort called with Low = 58, High = 57
+Call 83 to Quicksort called with Low = 59, High = 99
+Call to Partition returned pivotpoint = 93
+Call 84 to Quicksort called with Low = 59, High = 92
+Call to Partition returned pivotpoint = 79
+Call 85 to Quicksort called with Low = 59, High = 78
+Call to Partition returned pivotpoint = 74
+Call 86 to Quicksort called with Low = 59, High = 73
+Call to Partition returned pivotpoint = 65
+Call 87 to Quicksort called with Low = 59, High = 64
+Call to Partition returned pivotpoint = 62
+Call 88 to Quicksort called with Low = 59, High = 61
+Call to Partition returned pivotpoint = 59
+Call 89 to Quicksort called with Low = 59, High = 58
+Call 90 to Quicksort called with Low = 60, High = 61
+Call to Partition returned pivotpoint = 61
+Call 91 to Quicksort called with Low = 60, High = 60
+Call 92 to Quicksort called with Low = 62, High = 61
+Call 93 to Quicksort called with Low = 63, High = 64
+Call to Partition returned pivotpoint = 64
+Call 94 to Quicksort called with Low = 63, High = 63
+Call 95 to Quicksort called with Low = 65, High = 64
+Call 96 to Quicksort called with Low = 66, High = 73
+Call to Partition returned pivotpoint = 69
+Call 97 to Quicksort called with Low = 66, High = 68
+Call to Partition returned pivotpoint = 66
+Call 98 to Quicksort called with Low = 66, High = 65
+Call 99 to Quicksort called with Low = 67, High = 68
+Call to Partition returned pivotpoint = 68
+Call 100 to Quicksort called with Low = 67, High = 67
+Call 101 to Quicksort called with Low = 69, High = 68
+Call 102 to Quicksort called with Low = 70, High = 73
+Call to Partition returned pivotpoint = 73
+Call 103 to Quicksort called with Low = 70, High = 72
+Call to Partition returned pivotpoint = 72
+Call 104 to Quicksort called with Low = 70, High = 71
+Call to Partition returned pivotpoint = 71
+Call 105 to Quicksort called with Low = 70, High = 70
+Call 106 to Quicksort called with Low = 72, High = 71
+Call 107 to Quicksort called with Low = 73, High = 72
+Call 108 to Quicksort called with Low = 74, High = 73
+Call 109 to Quicksort called with Low = 75, High = 78
+Call to Partition returned pivotpoint = 78
+Call 110 to Quicksort called with Low = 75, High = 77
+Call to Partition returned pivotpoint = 77
+Call 111 to Quicksort called with Low = 75, High = 76
+Call to Partition returned pivotpoint = 76
+Call 112 to Quicksort called with Low = 75, High = 75
+Call 113 to Quicksort called with Low = 77, High = 76
+Call 114 to Quicksort called with Low = 78, High = 77
+Call 115 to Quicksort called with Low = 79, High = 78
+Call 116 to Quicksort called with Low = 80, High = 92
+Call to Partition returned pivotpoint = 80
+Call 117 to Quicksort called with Low = 80, High = 79
+Call 118 to Quicksort called with Low = 81, High = 92
+Call to Partition returned pivotpoint = 81
+Call 119 to Quicksort called with Low = 81, High = 80
+Call 120 to Quicksort called with Low = 82, High = 92
+Call to Partition returned pivotpoint = 88
+Call 121 to Quicksort called with Low = 82, High = 87
+Call to Partition returned pivotpoint = 84
+Call 122 to Quicksort called with Low = 82, High = 83
+Call to Partition returned pivotpoint = 83
+Call 123 to Quicksort called with Low = 82, High = 82
+Call 124 to Quicksort called with Low = 84, High = 83
+Call 125 to Quicksort called with Low = 85, High = 87
+Call to Partition returned pivotpoint = 86
+Call 126 to Quicksort called with Low = 85, High = 85
+Call 127 to Quicksort called with Low = 87, High = 87
+Call 128 to Quicksort called with Low = 89, High = 92
+Call to Partition returned pivotpoint = 90
+Call 129 to Quicksort called with Low = 89, High = 89
+Call 130 to Quicksort called with Low = 91, High = 92
+Call to Partition returned pivotpoint = 91
+Call 131 to Quicksort called with Low = 91, High = 90
+Call 132 to Quicksort called with Low = 92, High = 92
+Call 133 to Quicksort called with Low = 94, High = 99
+Call to Partition returned pivotpoint = 99
+Call 134 to Quicksort called with Low = 94, High = 98
+Call to Partition returned pivotpoint = 97
+Call 135 to Quicksort called with Low = 94, High = 96
+Call to Partition returned pivotpoint = 94
+Call 136 to Quicksort called with Low = 94, High = 93
+Call 137 to Quicksort called with Low = 95, High = 96
+Call to Partition returned pivotpoint = 96
+Call 138 to Quicksort called with Low = 95, High = 95
+Call 139 to Quicksort called with Low = 97, High = 96
+Call 140 to Quicksort called with Low = 98, High = 98
+Call 141 to Quicksort called with Low = 100, High = 99
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 
+Total Comparisons = 610
+Total Swaps = 419
+Time taken = 936 microseconds
+--------------------------------------------------------------------------------
+//Array 7
+
+Call 1 to Quicksort called with Low = 0, High = 99
+Call to Partition returned pivotpoint = 0
+Call 2 to Quicksort called with Low = 0, High = -1
+Call 3 to Quicksort called with Low = 1, High = 99
+Call to Partition returned pivotpoint = 1
+Call 4 to Quicksort called with Low = 1, High = 0
+Call 5 to Quicksort called with Low = 2, High = 99
+Call to Partition returned pivotpoint = 2
+Call 6 to Quicksort called with Low = 2, High = 1
+Call 7 to Quicksort called with Low = 3, High = 99
+Call to Partition returned pivotpoint = 3
+Call 8 to Quicksort called with Low = 3, High = 2
+Call 9 to Quicksort called with Low = 4, High = 99
+Call to Partition returned pivotpoint = 4
+Call 10 to Quicksort called with Low = 4, High = 3
+Call 11 to Quicksort called with Low = 5, High = 99
+Call to Partition returned pivotpoint = 5
+Call 12 to Quicksort called with Low = 5, High = 4
+Call 13 to Quicksort called with Low = 6, High = 99
+Call to Partition returned pivotpoint = 6
+Call 14 to Quicksort called with Low = 6, High = 5
+Call 15 to Quicksort called with Low = 7, High = 99
+Call to Partition returned pivotpoint = 7
+Call 16 to Quicksort called with Low = 7, High = 6
+Call 17 to Quicksort called with Low = 8, High = 99
+Call to Partition returned pivotpoint = 8
+Call 18 to Quicksort called with Low = 8, High = 7
+Call 19 to Quicksort called with Low = 9, High = 99
+Call to Partition returned pivotpoint = 9
+Call 20 to Quicksort called with Low = 9, High = 8
+Call 21 to Quicksort called with Low = 10, High = 99
+Call to Partition returned pivotpoint = 10
+Call 22 to Quicksort called with Low = 10, High = 9
+Call 23 to Quicksort called with Low = 11, High = 99
+Call to Partition returned pivotpoint = 11
+Call 24 to Quicksort called with Low = 11, High = 10
+Call 25 to Quicksort called with Low = 12, High = 99
+Call to Partition returned pivotpoint = 12
+Call 26 to Quicksort called with Low = 12, High = 11
+Call 27 to Quicksort called with Low = 13, High = 99
+Call to Partition returned pivotpoint = 13
+Call 28 to Quicksort called with Low = 13, High = 12
+Call 29 to Quicksort called with Low = 14, High = 99
+Call to Partition returned pivotpoint = 14
+Call 30 to Quicksort called with Low = 14, High = 13
+Call 31 to Quicksort called with Low = 15, High = 99
+Call to Partition returned pivotpoint = 15
+Call 32 to Quicksort called with Low = 15, High = 14
+Call 33 to Quicksort called with Low = 16, High = 99
+Call to Partition returned pivotpoint = 16
+Call 34 to Quicksort called with Low = 16, High = 15
+Call 35 to Quicksort called with Low = 17, High = 99
+Call to Partition returned pivotpoint = 17
+Call 36 to Quicksort called with Low = 17, High = 16
+Call 37 to Quicksort called with Low = 18, High = 99
+Call to Partition returned pivotpoint = 18
+Call 38 to Quicksort called with Low = 18, High = 17
+Call 39 to Quicksort called with Low = 19, High = 99
+Call to Partition returned pivotpoint = 19
+Call 40 to Quicksort called with Low = 19, High = 18
+Call 41 to Quicksort called with Low = 20, High = 99
+Call to Partition returned pivotpoint = 20
+Call 42 to Quicksort called with Low = 20, High = 19
+Call 43 to Quicksort called with Low = 21, High = 99
+Call to Partition returned pivotpoint = 21
+Call 44 to Quicksort called with Low = 21, High = 20
+Call 45 to Quicksort called with Low = 22, High = 99
+Call to Partition returned pivotpoint = 22
+Call 46 to Quicksort called with Low = 22, High = 21
+Call 47 to Quicksort called with Low = 23, High = 99
+Call to Partition returned pivotpoint = 23
+Call 48 to Quicksort called with Low = 23, High = 22
+Call 49 to Quicksort called with Low = 24, High = 99
+Call to Partition returned pivotpoint = 24
+Call 50 to Quicksort called with Low = 24, High = 23
+Call 51 to Quicksort called with Low = 25, High = 99
+Call to Partition returned pivotpoint = 25
+Call 52 to Quicksort called with Low = 25, High = 24
+Call 53 to Quicksort called with Low = 26, High = 99
+Call to Partition returned pivotpoint = 26
+Call 54 to Quicksort called with Low = 26, High = 25
+Call 55 to Quicksort called with Low = 27, High = 99
+Call to Partition returned pivotpoint = 27
+Call 56 to Quicksort called with Low = 27, High = 26
+Call 57 to Quicksort called with Low = 28, High = 99
+Call to Partition returned pivotpoint = 28
+Call 58 to Quicksort called with Low = 28, High = 27
+Call 59 to Quicksort called with Low = 29, High = 99
+Call to Partition returned pivotpoint = 29
+Call 60 to Quicksort called with Low = 29, High = 28
+Call 61 to Quicksort called with Low = 30, High = 99
+Call to Partition returned pivotpoint = 30
+Call 62 to Quicksort called with Low = 30, High = 29
+Call 63 to Quicksort called with Low = 31, High = 99
+Call to Partition returned pivotpoint = 31
+Call 64 to Quicksort called with Low = 31, High = 30
+Call 65 to Quicksort called with Low = 32, High = 99
+Call to Partition returned pivotpoint = 32
+Call 66 to Quicksort called with Low = 32, High = 31
+Call 67 to Quicksort called with Low = 33, High = 99
+Call to Partition returned pivotpoint = 33
+Call 68 to Quicksort called with Low = 33, High = 32
+Call 69 to Quicksort called with Low = 34, High = 99
+Call to Partition returned pivotpoint = 34
+Call 70 to Quicksort called with Low = 34, High = 33
+Call 71 to Quicksort called with Low = 35, High = 99
+Call to Partition returned pivotpoint = 35
+Call 72 to Quicksort called with Low = 35, High = 34
+Call 73 to Quicksort called with Low = 36, High = 99
+Call to Partition returned pivotpoint = 36
+Call 74 to Quicksort called with Low = 36, High = 35
+Call 75 to Quicksort called with Low = 37, High = 99
+Call to Partition returned pivotpoint = 37
+Call 76 to Quicksort called with Low = 37, High = 36
+Call 77 to Quicksort called with Low = 38, High = 99
+Call to Partition returned pivotpoint = 38
+Call 78 to Quicksort called with Low = 38, High = 37
+Call 79 to Quicksort called with Low = 39, High = 99
+Call to Partition returned pivotpoint = 39
+Call 80 to Quicksort called with Low = 39, High = 38
+Call 81 to Quicksort called with Low = 40, High = 99
+Call to Partition returned pivotpoint = 40
+Call 82 to Quicksort called with Low = 40, High = 39
+Call 83 to Quicksort called with Low = 41, High = 99
+Call to Partition returned pivotpoint = 41
+Call 84 to Quicksort called with Low = 41, High = 40
+Call 85 to Quicksort called with Low = 42, High = 99
+Call to Partition returned pivotpoint = 42
+Call 86 to Quicksort called with Low = 42, High = 41
+Call 87 to Quicksort called with Low = 43, High = 99
+Call to Partition returned pivotpoint = 43
+Call 88 to Quicksort called with Low = 43, High = 42
+Call 89 to Quicksort called with Low = 44, High = 99
+Call to Partition returned pivotpoint = 44
+Call 90 to Quicksort called with Low = 44, High = 43
+Call 91 to Quicksort called with Low = 45, High = 99
+Call to Partition returned pivotpoint = 45
+Call 92 to Quicksort called with Low = 45, High = 44
+Call 93 to Quicksort called with Low = 46, High = 99
+Call to Partition returned pivotpoint = 46
+Call 94 to Quicksort called with Low = 46, High = 45
+Call 95 to Quicksort called with Low = 47, High = 99
+Call to Partition returned pivotpoint = 47
+Call 96 to Quicksort called with Low = 47, High = 46
+Call 97 to Quicksort called with Low = 48, High = 99
+Call to Partition returned pivotpoint = 48
+Call 98 to Quicksort called with Low = 48, High = 47
+Call 99 to Quicksort called with Low = 49, High = 99
+Call to Partition returned pivotpoint = 49
+Call 100 to Quicksort called with Low = 49, High = 48
+Call 101 to Quicksort called with Low = 50, High = 99
+Call to Partition returned pivotpoint = 50
+Call 102 to Quicksort called with Low = 50, High = 49
+Call 103 to Quicksort called with Low = 51, High = 99
+Call to Partition returned pivotpoint = 51
+Call 104 to Quicksort called with Low = 51, High = 50
+Call 105 to Quicksort called with Low = 52, High = 99
+Call to Partition returned pivotpoint = 52
+Call 106 to Quicksort called with Low = 52, High = 51
+Call 107 to Quicksort called with Low = 53, High = 99
+Call to Partition returned pivotpoint = 53
+Call 108 to Quicksort called with Low = 53, High = 52
+Call 109 to Quicksort called with Low = 54, High = 99
+Call to Partition returned pivotpoint = 54
+Call 110 to Quicksort called with Low = 54, High = 53
+Call 111 to Quicksort called with Low = 55, High = 99
+Call to Partition returned pivotpoint = 55
+Call 112 to Quicksort called with Low = 55, High = 54
+Call 113 to Quicksort called with Low = 56, High = 99
+Call to Partition returned pivotpoint = 56
+Call 114 to Quicksort called with Low = 56, High = 55
+Call 115 to Quicksort called with Low = 57, High = 99
+Call to Partition returned pivotpoint = 57
+Call 116 to Quicksort called with Low = 57, High = 56
+Call 117 to Quicksort called with Low = 58, High = 99
+Call to Partition returned pivotpoint = 58
+Call 118 to Quicksort called with Low = 58, High = 57
+Call 119 to Quicksort called with Low = 59, High = 99
+Call to Partition returned pivotpoint = 59
+Call 120 to Quicksort called with Low = 59, High = 58
+Call 121 to Quicksort called with Low = 60, High = 99
+Call to Partition returned pivotpoint = 60
+Call 122 to Quicksort called with Low = 60, High = 59
+Call 123 to Quicksort called with Low = 61, High = 99
+Call to Partition returned pivotpoint = 61
+Call 124 to Quicksort called with Low = 61, High = 60
+Call 125 to Quicksort called with Low = 62, High = 99
+Call to Partition returned pivotpoint = 62
+Call 126 to Quicksort called with Low = 62, High = 61
+Call 127 to Quicksort called with Low = 63, High = 99
+Call to Partition returned pivotpoint = 63
+Call 128 to Quicksort called with Low = 63, High = 62
+Call 129 to Quicksort called with Low = 64, High = 99
+Call to Partition returned pivotpoint = 64
+Call 130 to Quicksort called with Low = 64, High = 63
+Call 131 to Quicksort called with Low = 65, High = 99
+Call to Partition returned pivotpoint = 65
+Call 132 to Quicksort called with Low = 65, High = 64
+Call 133 to Quicksort called with Low = 66, High = 99
+Call to Partition returned pivotpoint = 66
+Call 134 to Quicksort called with Low = 66, High = 65
+Call 135 to Quicksort called with Low = 67, High = 99
+Call to Partition returned pivotpoint = 67
+Call 136 to Quicksort called with Low = 67, High = 66
+Call 137 to Quicksort called with Low = 68, High = 99
+Call to Partition returned pivotpoint = 68
+Call 138 to Quicksort called with Low = 68, High = 67
+Call 139 to Quicksort called with Low = 69, High = 99
+Call to Partition returned pivotpoint = 69
+Call 140 to Quicksort called with Low = 69, High = 68
+Call 141 to Quicksort called with Low = 70, High = 99
+Call to Partition returned pivotpoint = 70
+Call 142 to Quicksort called with Low = 70, High = 69
+Call 143 to Quicksort called with Low = 71, High = 99
+Call to Partition returned pivotpoint = 71
+Call 144 to Quicksort called with Low = 71, High = 70
+Call 145 to Quicksort called with Low = 72, High = 99
+Call to Partition returned pivotpoint = 72
+Call 146 to Quicksort called with Low = 72, High = 71
+Call 147 to Quicksort called with Low = 73, High = 99
+Call to Partition returned pivotpoint = 73
+Call 148 to Quicksort called with Low = 73, High = 72
+Call 149 to Quicksort called with Low = 74, High = 99
+Call to Partition returned pivotpoint = 74
+Call 150 to Quicksort called with Low = 74, High = 73
+Call 151 to Quicksort called with Low = 75, High = 99
+Call to Partition returned pivotpoint = 75
+Call 152 to Quicksort called with Low = 75, High = 74
+Call 153 to Quicksort called with Low = 76, High = 99
+Call to Partition returned pivotpoint = 76
+Call 154 to Quicksort called with Low = 76, High = 75
+Call 155 to Quicksort called with Low = 77, High = 99
+Call to Partition returned pivotpoint = 77
+Call 156 to Quicksort called with Low = 77, High = 76
+Call 157 to Quicksort called with Low = 78, High = 99
+Call to Partition returned pivotpoint = 78
+Call 158 to Quicksort called with Low = 78, High = 77
+Call 159 to Quicksort called with Low = 79, High = 99
+Call to Partition returned pivotpoint = 79
+Call 160 to Quicksort called with Low = 79, High = 78
+Call 161 to Quicksort called with Low = 80, High = 99
+Call to Partition returned pivotpoint = 80
+Call 162 to Quicksort called with Low = 80, High = 79
+Call 163 to Quicksort called with Low = 81, High = 99
+Call to Partition returned pivotpoint = 81
+Call 164 to Quicksort called with Low = 81, High = 80
+Call 165 to Quicksort called with Low = 82, High = 99
+Call to Partition returned pivotpoint = 82
+Call 166 to Quicksort called with Low = 82, High = 81
+Call 167 to Quicksort called with Low = 83, High = 99
+Call to Partition returned pivotpoint = 83
+Call 168 to Quicksort called with Low = 83, High = 82
+Call 169 to Quicksort called with Low = 84, High = 99
+Call to Partition returned pivotpoint = 84
+Call 170 to Quicksort called with Low = 84, High = 83
+Call 171 to Quicksort called with Low = 85, High = 99
+Call to Partition returned pivotpoint = 85
+Call 172 to Quicksort called with Low = 85, High = 84
+Call 173 to Quicksort called with Low = 86, High = 99
+Call to Partition returned pivotpoint = 86
+Call 174 to Quicksort called with Low = 86, High = 85
+Call 175 to Quicksort called with Low = 87, High = 99
+Call to Partition returned pivotpoint = 87
+Call 176 to Quicksort called with Low = 87, High = 86
+Call 177 to Quicksort called with Low = 88, High = 99
+Call to Partition returned pivotpoint = 88
+Call 178 to Quicksort called with Low = 88, High = 87
+Call 179 to Quicksort called with Low = 89, High = 99
+Call to Partition returned pivotpoint = 89
+Call 180 to Quicksort called with Low = 89, High = 88
+Call 181 to Quicksort called with Low = 90, High = 99
+Call to Partition returned pivotpoint = 90
+Call 182 to Quicksort called with Low = 90, High = 89
+Call 183 to Quicksort called with Low = 91, High = 99
+Call to Partition returned pivotpoint = 91
+Call 184 to Quicksort called with Low = 91, High = 90
+Call 185 to Quicksort called with Low = 92, High = 99
+Call to Partition returned pivotpoint = 92
+Call 186 to Quicksort called with Low = 92, High = 91
+Call 187 to Quicksort called with Low = 93, High = 99
+Call to Partition returned pivotpoint = 93
+Call 188 to Quicksort called with Low = 93, High = 92
+Call 189 to Quicksort called with Low = 94, High = 99
+Call to Partition returned pivotpoint = 94
+Call 190 to Quicksort called with Low = 94, High = 93
+Call 191 to Quicksort called with Low = 95, High = 99
+Call to Partition returned pivotpoint = 95
+Call 192 to Quicksort called with Low = 95, High = 94
+Call 193 to Quicksort called with Low = 96, High = 99
+Call to Partition returned pivotpoint = 96
+Call 194 to Quicksort called with Low = 96, High = 95
+Call 195 to Quicksort called with Low = 97, High = 99
+Call to Partition returned pivotpoint = 97
+Call 196 to Quicksort called with Low = 97, High = 96
+Call 197 to Quicksort called with Low = 98, High = 99
+Call to Partition returned pivotpoint = 98
+Call 198 to Quicksort called with Low = 98, High = 97
+Call 199 to Quicksort called with Low = 99, High = 99
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 
+Total Comparisons = 4950
+Total Swaps = 99
+Time taken = 960 microseconds
+-------------------------------------------
+//Array 8
+
+
+Call 1 to Quicksort called with Low = 0, High = 99
+Call to Partition returned pivotpoint = 99
+Call 2 to Quicksort called with Low = 0, High = 98
+Call to Partition returned pivotpoint = 0
+Call 3 to Quicksort called with Low = 0, High = -1
+Call 4 to Quicksort called with Low = 1, High = 98
+Call to Partition returned pivotpoint = 98
+Call 5 to Quicksort called with Low = 1, High = 97
+Call to Partition returned pivotpoint = 1
+Call 6 to Quicksort called with Low = 1, High = 0
+Call 7 to Quicksort called with Low = 2, High = 97
+Call to Partition returned pivotpoint = 97
+Call 8 to Quicksort called with Low = 2, High = 96
+Call to Partition returned pivotpoint = 2
+Call 9 to Quicksort called with Low = 2, High = 1
+Call 10 to Quicksort called with Low = 3, High = 96
+Call to Partition returned pivotpoint = 96
+Call 11 to Quicksort called with Low = 3, High = 95
+Call to Partition returned pivotpoint = 3
+Call 12 to Quicksort called with Low = 3, High = 2
+Call 13 to Quicksort called with Low = 4, High = 95
+Call to Partition returned pivotpoint = 95
+Call 14 to Quicksort called with Low = 4, High = 94
+Call to Partition returned pivotpoint = 4
+Call 15 to Quicksort called with Low = 4, High = 3
+Call 16 to Quicksort called with Low = 5, High = 94
+Call to Partition returned pivotpoint = 94
+Call 17 to Quicksort called with Low = 5, High = 93
+Call to Partition returned pivotpoint = 5
+Call 18 to Quicksort called with Low = 5, High = 4
+Call 19 to Quicksort called with Low = 6, High = 93
+Call to Partition returned pivotpoint = 93
+Call 20 to Quicksort called with Low = 6, High = 92
+Call to Partition returned pivotpoint = 6
+Call 21 to Quicksort called with Low = 6, High = 5
+Call 22 to Quicksort called with Low = 7, High = 92
+Call to Partition returned pivotpoint = 92
+Call 23 to Quicksort called with Low = 7, High = 91
+Call to Partition returned pivotpoint = 7
+Call 24 to Quicksort called with Low = 7, High = 6
+Call 25 to Quicksort called with Low = 8, High = 91
+Call to Partition returned pivotpoint = 91
+Call 26 to Quicksort called with Low = 8, High = 90
+Call to Partition returned pivotpoint = 8
+Call 27 to Quicksort called with Low = 8, High = 7
+Call 28 to Quicksort called with Low = 9, High = 90
+Call to Partition returned pivotpoint = 90
+Call 29 to Quicksort called with Low = 9, High = 89
+Call to Partition returned pivotpoint = 9
+Call 30 to Quicksort called with Low = 9, High = 8
+Call 31 to Quicksort called with Low = 10, High = 89
+Call to Partition returned pivotpoint = 89
+Call 32 to Quicksort called with Low = 10, High = 88
+Call to Partition returned pivotpoint = 10
+Call 33 to Quicksort called with Low = 10, High = 9
+Call 34 to Quicksort called with Low = 11, High = 88
+Call to Partition returned pivotpoint = 88
+Call 35 to Quicksort called with Low = 11, High = 87
+Call to Partition returned pivotpoint = 11
+Call 36 to Quicksort called with Low = 11, High = 10
+Call 37 to Quicksort called with Low = 12, High = 87
+Call to Partition returned pivotpoint = 87
+Call 38 to Quicksort called with Low = 12, High = 86
+Call to Partition returned pivotpoint = 12
+Call 39 to Quicksort called with Low = 12, High = 11
+Call 40 to Quicksort called with Low = 13, High = 86
+Call to Partition returned pivotpoint = 86
+Call 41 to Quicksort called with Low = 13, High = 85
+Call to Partition returned pivotpoint = 13
+Call 42 to Quicksort called with Low = 13, High = 12
+Call 43 to Quicksort called with Low = 14, High = 85
+Call to Partition returned pivotpoint = 85
+Call 44 to Quicksort called with Low = 14, High = 84
+Call to Partition returned pivotpoint = 14
+Call 45 to Quicksort called with Low = 14, High = 13
+Call 46 to Quicksort called with Low = 15, High = 84
+Call to Partition returned pivotpoint = 84
+Call 47 to Quicksort called with Low = 15, High = 83
+Call to Partition returned pivotpoint = 15
+Call 48 to Quicksort called with Low = 15, High = 14
+Call 49 to Quicksort called with Low = 16, High = 83
+Call to Partition returned pivotpoint = 83
+Call 50 to Quicksort called with Low = 16, High = 82
+Call to Partition returned pivotpoint = 16
+Call 51 to Quicksort called with Low = 16, High = 15
+Call 52 to Quicksort called with Low = 17, High = 82
+Call to Partition returned pivotpoint = 82
+Call 53 to Quicksort called with Low = 17, High = 81
+Call to Partition returned pivotpoint = 17
+Call 54 to Quicksort called with Low = 17, High = 16
+Call 55 to Quicksort called with Low = 18, High = 81
+Call to Partition returned pivotpoint = 81
+Call 56 to Quicksort called with Low = 18, High = 80
+Call to Partition returned pivotpoint = 18
+Call 57 to Quicksort called with Low = 18, High = 17
+Call 58 to Quicksort called with Low = 19, High = 80
+Call to Partition returned pivotpoint = 80
+Call 59 to Quicksort called with Low = 19, High = 79
+Call to Partition returned pivotpoint = 19
+Call 60 to Quicksort called with Low = 19, High = 18
+Call 61 to Quicksort called with Low = 20, High = 79
+Call to Partition returned pivotpoint = 79
+Call 62 to Quicksort called with Low = 20, High = 78
+Call to Partition returned pivotpoint = 20
+Call 63 to Quicksort called with Low = 20, High = 19
+Call 64 to Quicksort called with Low = 21, High = 78
+Call to Partition returned pivotpoint = 78
+Call 65 to Quicksort called with Low = 21, High = 77
+Call to Partition returned pivotpoint = 21
+Call 66 to Quicksort called with Low = 21, High = 20
+Call 67 to Quicksort called with Low = 22, High = 77
+Call to Partition returned pivotpoint = 77
+Call 68 to Quicksort called with Low = 22, High = 76
+Call to Partition returned pivotpoint = 22
+Call 69 to Quicksort called with Low = 22, High = 21
+Call 70 to Quicksort called with Low = 23, High = 76
+Call to Partition returned pivotpoint = 76
+Call 71 to Quicksort called with Low = 23, High = 75
+Call to Partition returned pivotpoint = 23
+Call 72 to Quicksort called with Low = 23, High = 22
+Call 73 to Quicksort called with Low = 24, High = 75
+Call to Partition returned pivotpoint = 75
+Call 74 to Quicksort called with Low = 24, High = 74
+Call to Partition returned pivotpoint = 24
+Call 75 to Quicksort called with Low = 24, High = 23
+Call 76 to Quicksort called with Low = 25, High = 74
+Call to Partition returned pivotpoint = 74
+Call 77 to Quicksort called with Low = 25, High = 73
+Call to Partition returned pivotpoint = 25
+Call 78 to Quicksort called with Low = 25, High = 24
+Call 79 to Quicksort called with Low = 26, High = 73
+Call to Partition returned pivotpoint = 73
+Call 80 to Quicksort called with Low = 26, High = 72
+Call to Partition returned pivotpoint = 26
+Call 81 to Quicksort called with Low = 26, High = 25
+Call 82 to Quicksort called with Low = 27, High = 72
+Call to Partition returned pivotpoint = 72
+Call 83 to Quicksort called with Low = 27, High = 71
+Call to Partition returned pivotpoint = 27
+Call 84 to Quicksort called with Low = 27, High = 26
+Call 85 to Quicksort called with Low = 28, High = 71
+Call to Partition returned pivotpoint = 71
+Call 86 to Quicksort called with Low = 28, High = 70
+Call to Partition returned pivotpoint = 28
+Call 87 to Quicksort called with Low = 28, High = 27
+Call 88 to Quicksort called with Low = 29, High = 70
+Call to Partition returned pivotpoint = 70
+Call 89 to Quicksort called with Low = 29, High = 69
+Call to Partition returned pivotpoint = 29
+Call 90 to Quicksort called with Low = 29, High = 28
+Call 91 to Quicksort called with Low = 30, High = 69
+Call to Partition returned pivotpoint = 69
+Call 92 to Quicksort called with Low = 30, High = 68
+Call to Partition returned pivotpoint = 30
+Call 93 to Quicksort called with Low = 30, High = 29
+Call 94 to Quicksort called with Low = 31, High = 68
+Call to Partition returned pivotpoint = 68
+Call 95 to Quicksort called with Low = 31, High = 67
+Call to Partition returned pivotpoint = 31
+Call 96 to Quicksort called with Low = 31, High = 30
+Call 97 to Quicksort called with Low = 32, High = 67
+Call to Partition returned pivotpoint = 67
+Call 98 to Quicksort called with Low = 32, High = 66
+Call to Partition returned pivotpoint = 32
+Call 99 to Quicksort called with Low = 32, High = 31
+Call 100 to Quicksort called with Low = 33, High = 66
+Call to Partition returned pivotpoint = 66
+Call 101 to Quicksort called with Low = 33, High = 65
+Call to Partition returned pivotpoint = 33
+Call 102 to Quicksort called with Low = 33, High = 32
+Call 103 to Quicksort called with Low = 34, High = 65
+Call to Partition returned pivotpoint = 65
+Call 104 to Quicksort called with Low = 34, High = 64
+Call to Partition returned pivotpoint = 34
+Call 105 to Quicksort called with Low = 34, High = 33
+Call 106 to Quicksort called with Low = 35, High = 64
+Call to Partition returned pivotpoint = 64
+Call 107 to Quicksort called with Low = 35, High = 63
+Call to Partition returned pivotpoint = 35
+Call 108 to Quicksort called with Low = 35, High = 34
+Call 109 to Quicksort called with Low = 36, High = 63
+Call to Partition returned pivotpoint = 63
+Call 110 to Quicksort called with Low = 36, High = 62
+Call to Partition returned pivotpoint = 36
+Call 111 to Quicksort called with Low = 36, High = 35
+Call 112 to Quicksort called with Low = 37, High = 62
+Call to Partition returned pivotpoint = 62
+Call 113 to Quicksort called with Low = 37, High = 61
+Call to Partition returned pivotpoint = 37
+Call 114 to Quicksort called with Low = 37, High = 36
+Call 115 to Quicksort called with Low = 38, High = 61
+Call to Partition returned pivotpoint = 61
+Call 116 to Quicksort called with Low = 38, High = 60
+Call to Partition returned pivotpoint = 38
+Call 117 to Quicksort called with Low = 38, High = 37
+Call 118 to Quicksort called with Low = 39, High = 60
+Call to Partition returned pivotpoint = 60
+Call 119 to Quicksort called with Low = 39, High = 59
+Call to Partition returned pivotpoint = 39
+Call 120 to Quicksort called with Low = 39, High = 38
+Call 121 to Quicksort called with Low = 40, High = 59
+Call to Partition returned pivotpoint = 59
+Call 122 to Quicksort called with Low = 40, High = 58
+Call to Partition returned pivotpoint = 40
+Call 123 to Quicksort called with Low = 40, High = 39
+Call 124 to Quicksort called with Low = 41, High = 58
+Call to Partition returned pivotpoint = 58
+Call 125 to Quicksort called with Low = 41, High = 57
+Call to Partition returned pivotpoint = 41
+Call 126 to Quicksort called with Low = 41, High = 40
+Call 127 to Quicksort called with Low = 42, High = 57
+Call to Partition returned pivotpoint = 57
+Call 128 to Quicksort called with Low = 42, High = 56
+Call to Partition returned pivotpoint = 42
+Call 129 to Quicksort called with Low = 42, High = 41
+Call 130 to Quicksort called with Low = 43, High = 56
+Call to Partition returned pivotpoint = 56
+Call 131 to Quicksort called with Low = 43, High = 55
+Call to Partition returned pivotpoint = 43
+Call 132 to Quicksort called with Low = 43, High = 42
+Call 133 to Quicksort called with Low = 44, High = 55
+Call to Partition returned pivotpoint = 55
+Call 134 to Quicksort called with Low = 44, High = 54
+Call to Partition returned pivotpoint = 44
+Call 135 to Quicksort called with Low = 44, High = 43
+Call 136 to Quicksort called with Low = 45, High = 54
+Call to Partition returned pivotpoint = 54
+Call 137 to Quicksort called with Low = 45, High = 53
+Call to Partition returned pivotpoint = 45
+Call 138 to Quicksort called with Low = 45, High = 44
+Call 139 to Quicksort called with Low = 46, High = 53
+Call to Partition returned pivotpoint = 53
+Call 140 to Quicksort called with Low = 46, High = 52
+Call to Partition returned pivotpoint = 46
+Call 141 to Quicksort called with Low = 46, High = 45
+Call 142 to Quicksort called with Low = 47, High = 52
+Call to Partition returned pivotpoint = 52
+Call 143 to Quicksort called with Low = 47, High = 51
+Call to Partition returned pivotpoint = 47
+Call 144 to Quicksort called with Low = 47, High = 46
+Call 145 to Quicksort called with Low = 48, High = 51
+Call to Partition returned pivotpoint = 51
+Call 146 to Quicksort called with Low = 48, High = 50
+Call to Partition returned pivotpoint = 48
+Call 147 to Quicksort called with Low = 48, High = 47
+Call 148 to Quicksort called with Low = 49, High = 50
+Call to Partition returned pivotpoint = 50
+Call 149 to Quicksort called with Low = 49, High = 49
+Call 150 to Quicksort called with Low = 51, High = 50
+Call 151 to Quicksort called with Low = 52, High = 51
+Call 152 to Quicksort called with Low = 53, High = 52
+Call 153 to Quicksort called with Low = 54, High = 53
+Call 154 to Quicksort called with Low = 55, High = 54
+Call 155 to Quicksort called with Low = 56, High = 55
+Call 156 to Quicksort called with Low = 57, High = 56
+Call 157 to Quicksort called with Low = 58, High = 57
+Call 158 to Quicksort called with Low = 59, High = 58
+Call 159 to Quicksort called with Low = 60, High = 59
+Call 160 to Quicksort called with Low = 61, High = 60
+Call 161 to Quicksort called with Low = 62, High = 61
+Call 162 to Quicksort called with Low = 63, High = 62
+Call 163 to Quicksort called with Low = 64, High = 63
+Call 164 to Quicksort called with Low = 65, High = 64
+Call 165 to Quicksort called with Low = 66, High = 65
+Call 166 to Quicksort called with Low = 67, High = 66
+Call 167 to Quicksort called with Low = 68, High = 67
+Call 168 to Quicksort called with Low = 69, High = 68
+Call 169 to Quicksort called with Low = 70, High = 69
+Call 170 to Quicksort called with Low = 71, High = 70
+Call 171 to Quicksort called with Low = 72, High = 71
+Call 172 to Quicksort called with Low = 73, High = 72
+Call 173 to Quicksort called with Low = 74, High = 73
+Call 174 to Quicksort called with Low = 75, High = 74
+Call 175 to Quicksort called with Low = 76, High = 75
+Call 176 to Quicksort called with Low = 77, High = 76
+Call 177 to Quicksort called with Low = 78, High = 77
+Call 178 to Quicksort called with Low = 79, High = 78
+Call 179 to Quicksort called with Low = 80, High = 79
+Call 180 to Quicksort called with Low = 81, High = 80
+Call 181 to Quicksort called with Low = 82, High = 81
+Call 182 to Quicksort called with Low = 83, High = 82
+Call 183 to Quicksort called with Low = 84, High = 83
+Call 184 to Quicksort called with Low = 85, High = 84
+Call 185 to Quicksort called with Low = 86, High = 85
+Call 186 to Quicksort called with Low = 87, High = 86
+Call 187 to Quicksort called with Low = 88, High = 87
+Call 188 to Quicksort called with Low = 89, High = 88
+Call 189 to Quicksort called with Low = 90, High = 89
+Call 190 to Quicksort called with Low = 91, High = 90
+Call 191 to Quicksort called with Low = 92, High = 91
+Call 192 to Quicksort called with Low = 93, High = 92
+Call 193 to Quicksort called with Low = 94, High = 93
+Call 194 to Quicksort called with Low = 95, High = 94
+Call 195 to Quicksort called with Low = 96, High = 95
+Call 196 to Quicksort called with Low = 97, High = 96
+Call 197 to Quicksort called with Low = 98, High = 97
+Call 198 to Quicksort called with Low = 99, High = 98
+Call 199 to Quicksort called with Low = 100, High = 99
+Sorted Array: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 
+Total Comparisons = 4950
+Total Swaps = 2599
+Time taken = 335 microseconds
