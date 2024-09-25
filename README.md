@@ -1,7 +1,7 @@
 # csc2710-group-sorting
 The group sorting project for CSC2710
 
-1. Delegation - Get sorts done for next lab
+## 1. Delegation - Get sorts done for next lab
 
 - Bubble*
 - Merge*
@@ -11,8 +11,14 @@ The group sorting project for CSC2710
 - Heap*
 - Quick
 
-Josh - Insertion
-Kevin - Merge
-Graham - Bubble
-Isaac - Heap
-Jimi - all other sorts
+---
+
+- Josh - Insertion
+- Kevin - Merge
+- Graham - Bubble
+- Isaac - Heap
+- Jimi - all other sorts
+
+## 2. Dataset Building
+
+TODO
