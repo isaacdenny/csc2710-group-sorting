@@ -17,12 +17,25 @@ The group sorting project for CSC2710
 - Kevin - Merge
 - Graham - Bubble
 - Isaac - Heap
-- Jimi - all other sorts
+- Jimi - Compile all other sorts into project
 
-## 2. Design Project
+## 2. Design Project Structure & Flow - TODO - Next time we meet
 
-TODO - Next time we meet
+### How can this be used?
 
-## 3. Dataset Building
+### How will we present?
 
-TODO - Next time we meet
+- Show code?
+- Show results?
+
+### What is the most important part of the code to focus on?
+
+
+## 3. Dataset Building - TODO - Next time we meet
+
+- What datasets? (need 4)
+
+[ ] Almost sorted
+[ ] Randomly distributed
+[ ] Reverse sorted
+[ ] Many Duplicates
