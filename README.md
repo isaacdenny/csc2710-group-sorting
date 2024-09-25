@@ -19,6 +19,10 @@ The group sorting project for CSC2710
 - Isaac - Heap
 - Jimi - all other sorts
 
-## 2. Dataset Building
+## 2. Design Project
 
-TODO
+TODO - Next time we meet
+
+## 3. Dataset Building
+
+TODO - Next time we meet
