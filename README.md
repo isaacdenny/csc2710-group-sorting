@@ -39,3 +39,14 @@ The group sorting project for CSC2710
 - [ ] Randomly distributed
 - [ ] Reverse sorted
 - [ ] Many Duplicates
+
+## 4. Questions To Answer In Presentation
+
+1. A description of your teams’ approach to the assignment. Your presentation should present your
+results and summarize what your team learned about the various sorting.
+2. A presentation and walkthrough of the code that was written by the team.
+3. A final analysis of the success of the team’s approach and results. If the team’s program failed why did
+it do so. In computer science, it is quite normal for an attempted solution to fail to fully achieved the
+targeted goals. Some of the most successful software ever created has been built on the foundation of a
+few previous failed attempts where teams tried a solution and failed, but they gained valuable knowledge
+into why a certain approach will not work
