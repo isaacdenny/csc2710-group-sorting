@@ -32,3 +32,9 @@
 *.app
 
 .vscode/
+/.vs
+/x64
+/csc2710-.6E1C16A7/x64
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user

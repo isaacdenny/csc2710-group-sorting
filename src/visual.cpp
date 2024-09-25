@@ -1,7 +1,10 @@
 #include "visual.h"
 
 int displayData(int data[]) {
-     if (SDL_Init(SDL_INIT_VIDEO) < 0)
+    SDL_Surface *windowSurface = nullptr;
+    SDL_Surface *imageSurface = nullptr;
+
+    if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
         std::cerr << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
         return -1;
@@ -20,6 +23,10 @@ int displayData(int data[]) {
         SDL_Quit();
         return -1;
     }
+
+    windowSurface = SDL_GetWindowSurface(window);
+    imageSurface = SDL_LoadBMP("");
+    SDL_UpdateWindowSurface(window);
 
     // Main loop flag
     bool quit = false;
