@@ -4,7 +4,9 @@
 #define SDL_MAIN_HANDLED
 #include <SDL.h>
 #include <iostream>
+#include "graph.h"
+#include "sorts.h"
 
-int displayData(int arr[], int n);
+int displayData(SortMeasurement arr[], int n);
 
 #endif

@@ -1,6 +1,6 @@
-#include "visual.h"
+#include "displayData.h"
 
-int displayData(int data[], int n)
+int displayData(SortMeasurement data[], int n)
 {
     const int COLUMN_COUNT = 20;
     const int ROW_COUNT = 40;
@@ -8,6 +8,8 @@ int displayData(int data[], int n)
     const int WINDOW_HEIGHT = 480;
     const int UNIT_WIDTH = WINDOW_WIDTH / COLUMN_COUNT;
     const int UNIT_HEIGHT = WINDOW_HEIGHT / ROW_COUNT;
+    const int H_PADDING = UNIT_WIDTH * 2;
+    const int V_PADDING = UNIT_HEIGHT * 2;
 
     SDL_Surface *windowSurface = nullptr;
 
@@ -33,20 +35,11 @@ int displayData(int data[], int n)
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-    SDL_Rect r;
-    r.w = COLUMN_COUNT * UNIT_WIDTH / 2;
-    r.h = ROW_COUNT * UNIT_HEIGHT / 3;
-    r.x = WINDOW_WIDTH / 2 - r.w / 2;
-    r.y = WINDOW_HEIGHT / 2 - r.h / 2;
-
-    SDL_Point *points = new SDL_Point[n];
-
-    for (int i = 0; i < n; i++)
-    {
-        SDL_Point p = { i * UNIT_WIDTH + r.x, -data[i] * UNIT_HEIGHT + r.y + r.h };
-        points[i] = p;
-    }
-
+    Graph g(renderer, data, n);
+    g.setWidth(WINDOW_WIDTH - H_PADDING * 2);
+    g.setHeight(WINDOW_HEIGHT / 3);
+    g.setXpos(H_PADDING);
+    g.setYpos(V_PADDING);
 
     // Main loop flag
     bool quit = false;
@@ -68,10 +61,8 @@ int displayData(int data[], int n)
         SDL_SetRenderDrawColor(renderer, 242, 242, 242, 255);
         SDL_RenderClear(renderer);
 
-
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_RenderDrawLines(renderer, points, n);
-        SDL_RenderDrawRect(renderer, &r);
+        // draw graph here
+        g.draw();
 
         // render drawings
         SDL_RenderPresent(renderer);
@@ -79,4 +70,6 @@ int displayData(int data[], int n)
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
+
+    return 0;
 }
