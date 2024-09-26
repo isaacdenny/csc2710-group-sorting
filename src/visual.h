@@ -5,6 +5,6 @@
 #include <SDL.h>
 #include <iostream>
 
-int displayData(int arr[]);
+int displayData(int arr[], int n);
 
 #endif
