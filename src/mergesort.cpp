@@ -50,8 +50,8 @@ void mergesort(int array[], int size)
     {
         const int size2 = int(size/2);
         const int size3 = size - size2;
-        int array2[size2];
-        int array3[size3];
+        int *array2 = new int[size2];
+        int *array3 = new int[size3];
 
         for(int k = 0; k <= size2-1; k++)
         {

@@ -1,72 +1,83 @@
 #include "graph.h"
+#include <algorithm>
 
-Graph::Graph(SDL_Renderer *renderer, SortMeasurement data[], int n) : renderer(renderer), displayArea(), n(n), columnCount(10), rowCount(10), unitW(10), unitH(10), unitScale(1), deltaX(1), deltaY(1)
+Graph::Graph(SDL_Renderer *renderer, SortMeasurement data[], int n, char *title)
+	: renderer(renderer), n(n), columnCount(10), rowCount(10), unitW(10), unitH(10), unitScale(1), title(title)
 {
 	this->data = new SortMeasurement[n];
+	std::copy(data, data + n, this->data);
+
+	maxDataX = 0;
+	maxDataY = 0;
 	for (int i = 0; i < n; i++)
 	{
-		this->data[i] = data[i];
+		if (data[i].inputSize > maxDataX)
+		{
+			maxDataX = data[i].inputSize;
+		}
+		if (data[i].time > maxDataY)
+		{
+			maxDataY = data[i].time;
+		}
 	}
 
-	displayArea.x = 0;
-	displayArea.y = 0;
-	displayArea.w = 0;
-	displayArea.h = 0;
+	int sigX = 1;
+	while (maxDataX > 100)
+	{
+		maxDataX /= 10;
+		sigX *= 10;
+	}
+
+	maxDataX++;
+	maxDataX *= sigX;
+
+	int sigY = 1;
+	while (maxDataY > 100)
+	{
+		maxDataY /= 10;
+		sigY *= 10;
+	}
+
+	maxDataY++;
+	maxDataY *= sigY;
+
+	displayArea = {0, 0, 0, 0};
+
+	font = TTF_OpenFont("Roboto-Regular.ttf", 10);
+	if (!font)
+	{
+		std::cerr << "Font Loading Error: " << TTF_GetError() << std::endl;
+	}
+}
+
+Graph::~Graph()
+{
+	delete[] data; // Free allocated data array
 }
 
 SortMeasurement *Graph::getData()
 {
 	SortMeasurement *d = new SortMeasurement[n];
-	for (int i = 0; i < n; i++)
-	{
-		d[i] = data[i];
-	}
-
+	std::copy(data, data + n, d);
 	return d;
 }
 
-void Graph::setXpos(int x)
-{
-	displayArea.x = x;
-}
+void Graph::setXpos(int x) { displayArea.x = x; }
 
-void Graph::setYpos(int y)
-{
-	displayArea.y = y;
-}
+void Graph::setYpos(int y) { displayArea.y = y; }
 
 void Graph::setWidth(int w)
 {
 	displayArea.w = w;
-	columnCount = displayArea.w / (unitW * unitScale);
-
-	/* TODO: Write program to find largest inputSize */
-	SortMeasurement sm = data[9];
-	int maxValue = sm.inputSize;
-	if (maxValue > 0) {
-		deltaX = (maxValue / columnCount + (maxValue % columnCount > 0 ? 1 : 0)); // Rounding up
-	}
-	else {
-		deltaX = 1; // Avoid division by zero; set a default minimum.
-	}
+	unitW = displayArea.w / columnCount;
+	updateDeltaX();
 }
 
 void Graph::setHeight(int h)
 {
 	displayArea.h = h;
-	rowCount = displayArea.h / (unitH * unitScale);
-
-	/* TODO: Write program to find largest time */
-	SortMeasurement sm = data[9];
-	int maxValue = sm.time;
-	if (maxValue > 0)
-	{
-		deltaY = (maxValue / rowCount + (maxValue % rowCount > 0 ? 1 : 0)); // Rounding up
-	}
-	else
-	{
-		deltaY = 1; // Avoid division by zero; set a default minimum.
-	}
+	unitH = displayArea.h / rowCount;
+	updateDeltaY();
 }
 
 void Graph::setUnitScale(int s)
@@ -74,45 +85,100 @@ void Graph::setUnitScale(int s)
 	unitScale = s;
 }
 
-void Graph::draw()
+void Graph::updateDeltaX()
 {
 
-	/* Draw Graph Lines */
-
-	SDL_SetRenderDrawColor(renderer, 200, 200, 200, 255);
-
-	int x;
-	for (int i = 1; i <= columnCount; i++)
+	if (maxDataX > 0)
 	{
-		x = displayArea.x + i * unitW * unitScale;
+		deltaX = maxDataX / columnCount;
+	}
+	else
+	{
+		deltaX = 1;
+	}
+}
+
+void Graph::updateDeltaY()
+{
+	if (maxDataY > 0)
+	{
+		deltaY = maxDataY / rowCount;
+	}
+	else
+	{
+		deltaY = 1;
+	}
+}
+
+void Graph::drawLabel(const std::string &label, int x, int y, double xOffset, double yOffset)
+{
+	SDL_Surface *surface = TTF_RenderText_Solid(font, label.c_str(), textColor);
+	if (surface)
+	{
+		SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
+		if (texture)
+		{
+			int width = surface->w;
+			int height = surface->h;
+			SDL_Rect dstrect = {x + (width * xOffset), y + (height * yOffset), width, height};
+			SDL_RenderCopy(renderer, texture, nullptr, &dstrect);
+			SDL_DestroyTexture(texture);
+		}
+		SDL_FreeSurface(surface);
+	}
+}
+
+void Graph::draw()
+{
+	SDL_SetRenderDrawColor(renderer, graphColor.r, graphColor.g, graphColor.b, graphColor.a);
+
+	// Draw X Grid Lines
+	for (int i = 0; i <= columnCount; i++)
+	{
+		int x = displayArea.x + i * unitW * unitScale;
 		SDL_RenderDrawLine(renderer, x, displayArea.y, x, displayArea.y + displayArea.h);
+
+		// Draw X labels
+		if (i % (columnCount / 5) == 0)
+		{
+			std::string label = std::to_string(i * deltaX);
+			drawLabel(label, x, displayArea.y + displayArea.h, -0.5, 0);
+		}
 	}
 
-	int y;
+	// Draw Y Grid Lines
 	for (int i = 0; i < rowCount; i++)
 	{
-		y = displayArea.y + i * unitH * unitScale;
+		int y = displayArea.y + i * unitH * unitScale;
 		SDL_RenderDrawLine(renderer, displayArea.x, y, displayArea.x + displayArea.w, y);
+
+		// Draw Y labels
+		if (i % (rowCount / 5) == 0)
+		{
+			std::string label = std::to_string((rowCount - i) * deltaY);
+			drawLabel(label, displayArea.x, y, -1, -0.5);
+		}
 	}
 
-	/* Draw Data Points */
+	// Draw Data Points
 	SDL_Point *points = new SDL_Point[n];
-
 	for (int i = 0; i < n; i++)
 	{
-		SDL_Point p = {data[i].inputSize * unitW * unitScale / deltaX + displayArea.x, -data[i].time * unitH * unitScale / deltaY + displayArea.y + displayArea.h};
-		points[i] = p;
+		points[i].x = displayArea.x + (data[i].inputSize * unitW * unitScale / deltaX);
+		points[i].y = displayArea.y + displayArea.h - (data[i].time * unitH * unitScale / deltaY);
 	}
 
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+	// SDL_RenderDrawPoints(renderer, points, n);
 	SDL_RenderDrawLines(renderer, points, n);
 
-	/* Draw Graph Boundary */
-	// SDL_RenderDrawRect(renderer, &displayArea);
+	// Draw Axis
+	SDL_SetRenderDrawColor(renderer, graphColor.r, graphColor.g, graphColor.b, graphColor.a);
+	SDL_RenderDrawLine(renderer, displayArea.x, displayArea.y + displayArea.h, displayArea.x + displayArea.w, displayArea.y + displayArea.h); // X Axis
+	SDL_RenderDrawLine(renderer, displayArea.x, displayArea.y + displayArea.h, displayArea.x, displayArea.y);								  // Y Axis
 
-	/* Draw X Axis */
-	SDL_RenderDrawLine(renderer, displayArea.x, displayArea.y + displayArea.h, displayArea.x + displayArea.w, displayArea.y + displayArea.h);
+	drawLabel(title, displayArea.x + displayArea.w / 2, displayArea.y, -0.5, -1);
 
-	/* Draw Y Axis */
-	SDL_RenderDrawLine(renderer, displayArea.x, displayArea.y + displayArea.h, displayArea.x, displayArea.y);
+	delete[] points;
+	SDL_RenderPresent(renderer);
 }

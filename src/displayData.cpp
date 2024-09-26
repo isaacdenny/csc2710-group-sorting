@@ -19,12 +19,18 @@ int displayData(SortMeasurement data[], int n)
         return -1;
     }
 
+    if (TTF_Init() == -1)
+    {
+        std::cerr << "TTF Initialization Error: " << TTF_GetError() << std::endl;
+        return -1;
+    }
+
     SDL_Window *window = SDL_CreateWindow("SDL2 Window",
                                           SDL_WINDOWPOS_UNDEFINED,
                                           SDL_WINDOWPOS_UNDEFINED,
                                           WINDOW_WIDTH,
                                           WINDOW_HEIGHT,
-                                          SDL_WINDOW_SHOWN);
+                                          SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_MAXIMIZED | SDL_WINDOW_RESIZABLE);
 
     if (window == nullptr)
     {
@@ -35,7 +41,7 @@ int displayData(SortMeasurement data[], int n)
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-    Graph g(renderer, data, n);
+    Graph g(renderer, data, n, "Sorted: Time vs Input Size");
     g.setWidth(WINDOW_WIDTH - H_PADDING * 2);
     g.setHeight(WINDOW_HEIGHT / 3);
     g.setXpos(H_PADDING);
@@ -51,9 +57,17 @@ int displayData(SortMeasurement data[], int n)
         SDL_Delay(10);
         SDL_PollEvent(&e);
 
-        switch (e.type) {
+        switch (e.type)
+        {
         case SDL_QUIT:
             quit = true;
+            break;
+        case SDL_WINDOWEVENT:
+            if (e.window.event == SDL_WINDOWEVENT_RESIZED)
+            {
+                g.setWidth((e.window.data1 - H_PADDING * 2) / 3);
+                g.setHeight(e.window.data2 / 3);
+            }
             break;
             // TODO input handling code goes here
         }
@@ -63,13 +77,11 @@ int displayData(SortMeasurement data[], int n)
 
         // draw graph here
         g.draw();
-
-        // render drawings
-        SDL_RenderPresent(renderer);
     }
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
+    TTF_Quit();
 
     return 0;
 }
