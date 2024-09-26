@@ -40,3 +40,5 @@
 *.vcxproj.user
 
 /libs
+
+output
