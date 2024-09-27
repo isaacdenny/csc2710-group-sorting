@@ -41,7 +41,7 @@ int displayData(SortMeasurement data[], int n)
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-    Graph g(renderer, data, n, "Sorted: Time vs Input Size");
+    SMGraph g(renderer, data, n, "Sorted: Time vs Input Size");
     g.setWidth(WINDOW_WIDTH - H_PADDING * 2);
     g.setHeight(WINDOW_HEIGHT / 3);
     g.setXpos(H_PADDING);
@@ -65,7 +65,7 @@ int displayData(SortMeasurement data[], int n)
         case SDL_WINDOWEVENT:
             if (e.window.event == SDL_WINDOWEVENT_RESIZED)
             {
-                g.setWidth((e.window.data1 - H_PADDING * 2) / 3);
+                g.setWidth(e.window.data1 - H_PADDING * 2);
                 g.setHeight(e.window.data2 / 3);
             }
             break;

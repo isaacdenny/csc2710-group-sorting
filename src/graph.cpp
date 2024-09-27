@@ -1,7 +1,7 @@
 #include "graph.h"
 #include <algorithm>
 
-Graph::Graph(SDL_Renderer *renderer, SortMeasurement data[], int n, char *title)
+SMGraph::SMGraph(SDL_Renderer *renderer, SortMeasurement data[], int n, char *title)
 	: renderer(renderer), n(n), columnCount(10), rowCount(10), unitW(10), unitH(10), unitScale(1), title(title)
 {
 	this->data = new SortMeasurement[n];
@@ -50,42 +50,42 @@ Graph::Graph(SDL_Renderer *renderer, SortMeasurement data[], int n, char *title)
 	}
 }
 
-Graph::~Graph()
+SMGraph::~SMGraph()
 {
 	delete[] data; // Free allocated data array
 }
 
-SortMeasurement *Graph::getData()
+SortMeasurement *SMGraph::getData()
 {
 	SortMeasurement *d = new SortMeasurement[n];
 	std::copy(data, data + n, d);
 	return d;
 }
 
-void Graph::setXpos(int x) { displayArea.x = x; }
+void SMGraph::setXpos(int x) { displayArea.x = x; }
 
-void Graph::setYpos(int y) { displayArea.y = y; }
+void SMGraph::setYpos(int y) { displayArea.y = y; }
 
-void Graph::setWidth(int w)
+void SMGraph::setWidth(int w)
 {
 	displayArea.w = w;
 	unitW = displayArea.w / columnCount;
 	updateDeltaX();
 }
 
-void Graph::setHeight(int h)
+void SMGraph::setHeight(int h)
 {
 	displayArea.h = h;
 	unitH = displayArea.h / rowCount;
 	updateDeltaY();
 }
 
-void Graph::setUnitScale(int s)
+void SMGraph::setUnitScale(int s)
 {
 	unitScale = s;
 }
 
-void Graph::updateDeltaX()
+void SMGraph::updateDeltaX()
 {
 
 	if (maxDataX > 0)
@@ -98,7 +98,7 @@ void Graph::updateDeltaX()
 	}
 }
 
-void Graph::updateDeltaY()
+void SMGraph::updateDeltaY()
 {
 	if (maxDataY > 0)
 	{
@@ -110,7 +110,7 @@ void Graph::updateDeltaY()
 	}
 }
 
-void Graph::drawLabel(const std::string &label, int x, int y, double xOffset, double yOffset)
+void SMGraph::drawLabel(const std::string &label, int x, int y, double xOffset, double yOffset)
 {
 	SDL_Surface *surface = TTF_RenderText_Solid(font, label.c_str(), textColor);
 	if (surface)
@@ -128,7 +128,7 @@ void Graph::drawLabel(const std::string &label, int x, int y, double xOffset, do
 	}
 }
 
-void Graph::draw()
+void SMGraph::draw()
 {
 	SDL_SetRenderDrawColor(renderer, graphColor.r, graphColor.g, graphColor.b, graphColor.a);
 

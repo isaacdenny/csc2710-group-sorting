@@ -8,11 +8,11 @@
 #include <string>
 #include <cmath>
 
-class Graph
+class SMGraph
 {
 public:
-    Graph(SDL_Renderer *renderer, SortMeasurement data[], int n, char *title);
-    ~Graph();
+    SMGraph(SDL_Renderer *renderer, SortMeasurement data[], int n, char *title);
+    ~SMGraph();
     int getXpos() { return displayArea.x; }
     int getYpos() { return displayArea.y; }
     int getWidth() { return displayArea.w; }
