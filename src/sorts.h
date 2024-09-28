@@ -17,5 +17,5 @@ void heapify(int arr[], int n, int i);
 void heapsort(int arr[], int n);
 
 void bubbleSort(int arr[], int n);
-void mergesort(int arr[], int n);
+void mergesort(int arr[], int n, int* swapCount, int* compareCount);
 #endif

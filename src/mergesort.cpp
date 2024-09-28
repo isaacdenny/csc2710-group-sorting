@@ -1,15 +1,24 @@
-#include "sorts.h"
-
-void merge(int size2, int size3, const int array2[],
-                                 const int array3[],
-                                 int array[]
+/*
+Author: Kevin Schoeberle
+Mergesort
+*/
+void merge(int size2, int size3, int array2[],
+                                 int array3[],
+                                 int array[], int* swapCount, int* compareCount
                                  )
 {
     int i, j, k;
-
     i = 0, j = 0, k = 0;
+    //variable index initializing
+
+    //loops while indexes are less than the sizes of the arrays
     while(i < size2 && j < size3)
     {
+
+        //checks if the value at selected index is lower than the one at the other
+        //if it is then swaps OG array with the value of the lowest value between 
+        //the two compared
+        compareCount++;
         if(array2[i] < array3[j])
         {
             array[k] = array2[i];
@@ -21,52 +30,57 @@ void merge(int size2, int size3, const int array2[],
             array[k] = array3[j];
             j++;
         }
-
+        swapCount++;
         k++;
     }
-    if(i > size2)
+    //checks if the index is still less than the size at the left array
+    if(i < size2)
     {
-        while (i < size2)
-        {
+            while(i < size2)
+            {
             array[k] = array2[i];
             i++;
             k++;
-        }
+            swapCount++;
+            }
     }
-            
-    else
+    //checks if the index is still less than the size at the right array
+    else if (j < size3)
     {
+       while(j < size3)
+       {
         array[k] = array3[j];
         j++;
         k++;    
+        swapCount++;
+       }
     }
-
 }
 
 
-void mergesort(int array[], int size)
+
+//Mergesort main function
+void mergesort(int array[], int size, int* swapCount, int* compareCount)
 {
     if (size > 1)
     {
-        const int size2 = int(size/2);
-        const int size3 = size - size2;
-        int array2[size2];
-        int array3[size3];
+        //sizes of arrays initializing divides the OG size by 2 and then floors it then subtracts it from OG size to get size3
+        int size2 = size/2;
+        int size3 = size - size2;
+        
+        //initializes arrays at runtime
+        int *array2 = new int[size2];
+        int *array3 = new int[size3];
 
-        for(int k = 0; k <= size2-1; k++)
-        {
-            array2[k] = array[k];
-        }
 
-        for(int j = 0; j <= size3-1; j++)
-        {
-            array3[j] = array[j+size2];
-        }
+        //the logic to Mergesort
+        mergesort(array2, size2, swapCount, compareCount);
+        mergesort(array3, size3, swapCount, compareCount);
+        merge(size2, size3, array2, array3, array, swapCount, compareCount);
 
-        mergesort(array2, size2);
-        mergesort(array3, size3);
-        merge(size2, size3, array2, array3, array);
+
+        delete[] array2;
+        delete[] array3;
+        //deletes the arrays made preventing memory leaks
     }
 }
-
-
