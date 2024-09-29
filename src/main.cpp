@@ -1,4 +1,7 @@
 #include "sorts.h"
+#include "arraycopy.h"
+
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
@@ -29,5 +32,16 @@ int main(int argc, char *argv[])
     // }
 
     // displayData(data, 10);
-    return 0;
+
+
+
+ /* This is the array copy function, here's how to get it to work.
+    int arraysize = 1000; // Change size
+    int arr[arraysize]; //Change array name
+    std::string filename = "/Users/grahammccabe/csc2710-group-sorting/data/duplicates/repeated_values-input-1000-float.txt"; // File name here
+
+    arraycopy(filename,arr,arraysize); //change array name */
+
+
+    return 0; 
 }
