@@ -3,6 +3,6 @@
 
 #include <string>
 
-int* arraycopy(const std::string& filename, int& arraySize);
+void arraycopy(const std::string& filename, int arr[], int size);
 
 #endif

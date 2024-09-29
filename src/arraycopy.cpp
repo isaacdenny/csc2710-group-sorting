@@ -1,38 +1,22 @@
 #include "arraycopy.h"
 #include <iostream>
 #include <fstream>
-#include <vector>
 
-int* arraycopy(const std::string& filename, int& arraySize) {
-    std::ifstream inputFile(filename); 
+void arraycopy(const std::string& filename, int arr[], int size) {
+    std::ifstream inputFile(filename);  //opens the file
     
     if (!inputFile) {
-        std::cerr << "Error Opening File" << std::endl;
-        arraySize = 0;
-        return nullptr;
+        std::cerr << "Error opening file!" << std::endl;
+        return;
     }
 
-    std::vector<int> numbers;
-    double num;  //for the floating points
+    double num;
+    int index = 0;
 
-    //reads file
-    while (inputFile >> num) {
-        numbers.push_back(static_cast<int>(num));  //Turns float into int
-    }
     
-    //close file
-    inputFile.close(); 
-
-    //get the size of the array
-    arraySize = numbers.size();
-
-    //dynamically allocated array
-    int* arr = new int[arraySize];
-
-    //copy from the vector to the array
-    for (int i = 0; i < arraySize; ++i) {
-        arr[i] = numbers[i];
+    while (inputFile >> num && index < size) {
+        arr[index++] = static_cast<int>(num);  //converts num to integer
     }
 
-    return arr;
+    inputFile.close();  //close the file
 }
