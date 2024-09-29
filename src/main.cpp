@@ -1,4 +1,6 @@
 #include "sorts.h"
+#include "arraycopy.h"
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
@@ -30,5 +32,17 @@ int main(int argc, char *argv[])
 
     // displayData(data, 10);
 
-    return 0;
+
+
+ /*   // This is the array copy function, here's how to get it to work.
+    int arraysize = 0; // Change size
+    int* arrname = arraycopy("INCLUDE FULL PATH HERE", arraysize); // Change arrname
+
+    bubbleSort(arrname, arraysize); // change arrName
+
+    for( int i = 0; i < arraysize; i ++) {
+        std::cout << random1[i] << std::endl;
+    } */
+
+    return 0; 
 }
