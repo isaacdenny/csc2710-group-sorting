@@ -1,5 +1,5 @@
 #include "sorts.h"
-#include "arraycopy.h"
+#include "readFileToArray.h"
 
 #include <iostream>
 #include <chrono>
@@ -44,7 +44,7 @@ SortMeasurement measureSelection(std::string filename, int dataSize, dataSetType
     }
 
     int *data = new int[dataSize];
-    arraycopy(filename, data, dataSize);
+    readFileToArray(filename, data, dataSize);
 
     SortMeasurement sm;
     sm.sortType = SELECTION;

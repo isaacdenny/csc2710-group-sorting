@@ -1,8 +1,8 @@
-#include "arraycopy.h"
+#include "readFileToArray.h"
 #include <iostream>
 #include <fstream>
 
-void arraycopy(const std::string& filename, int arr[], int size) {
+void readFileToArray(const std::string& filename, int arr[], int size) {
     std::ifstream inputFile(filename);  //opens the file
     
     if (!inputFile) {
