@@ -1,5 +1,5 @@
 #include "sorts.h"
-#include "arraycopy.h"
+#include "readFileToArray.h"
 
 #include <iostream>
 
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
  /* This is the array copy function, here's how to get it to work.
     int arraysize = 1000; // Change size
     int arr[arraysize]; //Change array name
-    std::string filename = "/Users/grahammccabe/csc2710-group-sorting/data/duplicates/repeated_values-input-1000-float.txt"; // File name here
+    std::string filename = "./data/duplicates/repeated_values-input-1000-float.txt"; // File name here
 
-    arraycopy(filename,arr,arraysize); //change array name */
+    readFileToArray(filename,arr,arraysize); //change array name */
 
 
     return 0; 
