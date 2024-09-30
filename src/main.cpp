@@ -59,6 +59,15 @@ SortMeasurement measureSelection(std::string filename, int dataSize, dataSetType
     auto end = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(end - start).count();
 
+    for (int i = 0; i < dataSize; i++)
+    {
+        std::cout << data[i] << " ";
+        if (i % 20 == 0)
+        {
+            std::cout << std::endl;
+        }
+    }
+
     sm.compares = compCount;
     sm.swaps = swapCount;
     sm.time = duration;

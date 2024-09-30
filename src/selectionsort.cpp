@@ -15,8 +15,8 @@ void selectionSort(int arr[], int n, int &compCount, int &swapCount)
         }
 
         int temp = arr[i];
-        arr[smallest] = arr[i];
-        arr[i] = temp;
+        arr[i] = arr[smallest];
+        arr[smallest] = temp;
         swapCount++;
     }
 }
