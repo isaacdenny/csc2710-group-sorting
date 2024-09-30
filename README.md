@@ -30,15 +30,23 @@ The group sorting project for CSC2710
 
 ### What is the most important part of the code to focus on?
 
+Measurement accuracy and amount - structure of main function bringing the algorithms together
 
 ## 3. Dataset Building - TODO - Next time we meet
 
 - What datasets? (need 4)
 
-- [ ] Almost sorted
-- [ ] Randomly distributed
-- [ ] Reverse sorted
-- [ ] Many Duplicates
+- [x] Almost sorted
+- [x] Randomly distributed
+- [x] Reverse sorted
+- [x] Many Duplicates
+
+We wanted to find a dataset library that has already been set up for us so we could focus on  sample amount, measurement implementation, and presentation. We found and downloaded a [Benchmark Dataset for Sorting Algorithms](https://www.kaggle.com/datasets/bekiremirhanakay/benchmark-dataset-for-sorting-algorithms?select=ordered) from Kaggle that was free and legal to use under the license provided at the link.
+
+We sifted through the data and picked a few sample sizes that fit our needs:
+
+- TODO Describe sample size choices here
+- talk about how the data was in floating point format and how we got around that
 
 ## 4. Questions To Answer In Presentation
 
