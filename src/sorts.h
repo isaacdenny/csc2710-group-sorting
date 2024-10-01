@@ -30,8 +30,8 @@ struct SortMeasurement
 /*
     All of our sorting function headers can go here so we can include them in the main driver file
 */
-void heapify(int arr[], int n, int i);
-void heapsort(int arr[], int n);
+void heapify(int arr[], int n, int i, int &compCount, int &swapCount);
+void heapsort(int arr[], int n, int &compCount, int &swapCount);
 
 void bubbleSort(int arr[], int n, int &compCount, int &swapCount);
 
