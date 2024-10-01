@@ -7,6 +7,13 @@
 using namespace std::chrono;
 
 SortMeasurement measureSelection(std::string filename, int dataSize, dataSetType dataType);
+SortMeasurement measureMerge(std::string filename, int dataSize, dataSetType dataType);
+SortMeasurement measureQuick(std::string filename, int dataSize, dataSetType dataType);
+SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType dataType);
+SortMeasurement measureBubble(std::string filename, int dataSize, dataSetType dataType);
+SortMeasurement measureExchange(std::string filename, int dataSize, dataSetType dataType);
+//SortMeasurement measureHeap(std::string filename, int dataSize, dataSetType dataType);
+
 
 int main(int argc, char *argv[])
 {
