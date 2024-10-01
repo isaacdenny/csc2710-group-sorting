@@ -36,9 +36,7 @@ void heapsort(int arr[], int n);
 void bubbleSort(int arr[], int n, int &compCount, int &swapCount);
 
 void mergesort(int arr[], int n, int &compCount, int &swapCount);
-void merge(int size2, int size3, int array2[],
-           int array3[],
-           int array[], int &compCount, int &swapCount);
+void merge(int size2, int size3, int array2[], int array3[], int array[], int &compCount, int &swapCount);
 
 void qspartition(int arr[], int low, int high, int &pivotpoint, int &compCount, int &swapCount);
 void quicksort(int arr[], int low, int high, int &compCount, int &swapCount);
