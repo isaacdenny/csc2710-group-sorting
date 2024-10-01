@@ -7,12 +7,12 @@
 using namespace std::chrono;
 
 SortMeasurement measureSelection(std::string filename, int dataSize, dataSetType dataType);
+SortMeasurement measureHeap(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureMerge(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureQuick(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureBubble(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureExchange(std::string filename, int dataSize, dataSetType dataType);
-// SortMeasurement measureHeap(std::string filename, int dataSize, dataSetType dataType);
 
 int main(int argc, char *argv[])
 {
@@ -29,6 +29,12 @@ int main(int argc, char *argv[])
     std::cout << sm.compares << std::endl;
     std::cout << sm.swaps << std::endl;
     std::cout << sm.time << std::endl;
+
+    // std::cout << sm1.inputSize << std::endl;
+    // std::cout << sm1.sortType << std::endl;
+    // std::cout << sm1.compares << std::endl;
+    // std::cout << sm1.swaps << std::endl;
+    // std::cout << sm1.time << std::endl;
 
     return 0;
 }
@@ -234,9 +240,194 @@ SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType
     return sm;
 }
 
-// measureHeap
-//
-//
-//
-//
-//
+SortMeasurement measureMerge(std::string filename, int dataSize, dataSetType dataType)
+{
+    if (dataSize <= 0)
+    {
+        throw std::invalid_argument("dataSize must be greater than zero");
+    }
+
+    int *data = new int[dataSize];
+    readFileToArray(filename, data, dataSize);
+
+    SortMeasurement sm;
+    sm.sortType = MERGE;
+    sm.dataType = dataType;
+    sm.inputSize = dataSize;
+
+    int compCount = 0, swapCount = 0;
+    auto start = high_resolution_clock::now();
+
+    mergesort(data, dataSize, compCount, swapCount);
+
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    sm.compares = compCount;
+    sm.swaps = swapCount;
+    sm.time = duration;
+
+    delete[] data;
+
+    return sm;
+}
+
+SortMeasurement measureHeap(std::string filename, int dataSize, dataSetType dataType)
+{
+    if (dataSize <= 0)
+    {
+        throw std::invalid_argument("dataSize must be greater than zero");
+    }
+
+    int *data = new int[dataSize];
+    readFileToArray(filename, data, dataSize);
+
+    SortMeasurement sm;
+    sm.sortType = HEAP;
+    sm.dataType = dataType;
+    sm.inputSize = dataSize;
+
+    int compCount = 0, swapCount = 0;
+    auto start = high_resolution_clock::now();
+
+    heapsort(data, dataSize, compCount, swapCount);
+
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    sm.compares = compCount;
+    sm.swaps = swapCount;
+    sm.time = duration;
+
+    delete[] data;
+
+    return sm;
+}
+
+SortMeasurement measureQuick(std::string filename, int dataSize, dataSetType dataType)
+{
+    if (dataSize <= 0)
+    {
+        throw std::invalid_argument("dataSize must be greater than zero");
+    }
+
+    int *data = new int[dataSize];
+    readFileToArray(filename, data, dataSize);
+
+    SortMeasurement sm;
+    sm.sortType = QUICK;
+    sm.dataType = dataType;
+    sm.inputSize = dataSize;
+
+    int compCount = 0, swapCount = 0;
+    auto start = high_resolution_clock::now();
+
+    quicksort(data, 0, dataSize, compCount, swapCount);
+
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    sm.compares = compCount;
+    sm.swaps = swapCount;
+    sm.time = duration;
+
+    delete[] data;
+
+    return sm;
+}
+
+SortMeasurement measureExchange(std::string filename, int dataSize, dataSetType dataType)
+{
+    if (dataSize <= 0)
+    {
+        throw std::invalid_argument("dataSize must be greater than zero");
+    }
+
+    int *data = new int[dataSize];
+    readFileToArray(filename, data, dataSize);
+
+    SortMeasurement sm;
+    sm.sortType = EXCHANGE;
+    sm.dataType = dataType;
+    sm.inputSize = dataSize;
+
+    int compCount = 0, swapCount = 0;
+    auto start = high_resolution_clock::now();
+
+    exchangeSort(data, dataSize, compCount, swapCount);
+
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    sm.compares = compCount;
+    sm.swaps = swapCount;
+    sm.time = duration;
+
+    delete[] data;
+
+    return sm;
+}
+
+SortMeasurement measureBubble(std::string filename, int dataSize, dataSetType dataType)
+{
+    if (dataSize <= 0)
+    {
+        throw std::invalid_argument("dataSize must be greater than zero");
+    }
+
+    int *data = new int[dataSize];
+    readFileToArray(filename, data, dataSize);
+
+    SortMeasurement sm;
+    sm.sortType = BUBBLE;
+    sm.dataType = dataType;
+    sm.inputSize = dataSize;
+
+    int compCount = 0, swapCount = 0;
+    auto start = high_resolution_clock::now();
+
+    bubbleSort(data, dataSize, compCount, swapCount);
+
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    sm.compares = compCount;
+    sm.swaps = swapCount;
+    sm.time = duration;
+
+    delete[] data;
+
+    return sm;
+}
+
+SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType dataType)
+{
+    if (dataSize <= 0)
+    {
+        throw std::invalid_argument("dataSize must be greater than zero");
+    }
+
+    int *data = new int[dataSize];
+    readFileToArray(filename, data, dataSize);
+
+    SortMeasurement sm;
+    sm.sortType = INSERTION;
+    sm.dataType = dataType;
+    sm.inputSize = dataSize;
+
+    int compCount = 0, swapCount = 0;
+    auto start = high_resolution_clock::now();
+
+    // insertionSort(data, dataSize, compCount, swapCount);
+
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+
+    sm.compares = compCount;
+    sm.swaps = swapCount;
+    sm.time = duration;
+
+    delete[] data;
+
+    return sm;
+}
