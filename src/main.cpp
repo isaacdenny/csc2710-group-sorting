@@ -12,8 +12,7 @@ SortMeasurement measureQuick(std::string filename, int dataSize, dataSetType dat
 SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureBubble(std::string filename, int dataSize, dataSetType dataType);
 SortMeasurement measureExchange(std::string filename, int dataSize, dataSetType dataType);
-//SortMeasurement measureHeap(std::string filename, int dataSize, dataSetType dataType);
-
+// SortMeasurement measureHeap(std::string filename, int dataSize, dataSetType dataType);
 
 int main(int argc, char *argv[])
 {
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
         3. Measure performance and record data into results array
         4. Display results array in multiple formats (console data dump, console graphs?, SDL2 graphs/visuals)
     */
-    SortMeasurement sm = measureSelection("./data/duplicates/repeated_values-input-1000-float.txt", 1000, DUPLICATES);
+    SortMeasurement sm = measureInsertion("./data/duplicates/repeated_values-input-1000-float.txt", 1000, DUPLICATES);
 
     std::cout << sm.inputSize << std::endl;
     std::cout << sm.sortType << std::endl;
@@ -139,7 +138,6 @@ SortMeasurement measureQuick(std::string filename, int dataSize, dataSetType dat
     return sm;
 }
 
-
 SortMeasurement measureExchange(std::string filename, int dataSize, dataSetType dataType)
 {
     if (dataSize <= 0)
@@ -171,7 +169,6 @@ SortMeasurement measureExchange(std::string filename, int dataSize, dataSetType 
 
     return sm;
 }
-
 
 SortMeasurement measureBubble(std::string filename, int dataSize, dataSetType dataType)
 {
@@ -205,7 +202,6 @@ SortMeasurement measureBubble(std::string filename, int dataSize, dataSetType da
     return sm;
 }
 
-
 SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType dataType)
 {
     if (dataSize <= 0)
@@ -224,7 +220,7 @@ SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType
     int compCount = 0, swapCount = 0;
     auto start = high_resolution_clock::now();
 
-    //insertionSort(data, dataSize, compCount, swapCount);
+    insertionSort(data, dataSize, compCount, swapCount);
 
     auto end = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(end - start).count();
@@ -239,8 +235,8 @@ SortMeasurement measureInsertion(std::string filename, int dataSize, dataSetType
 }
 
 // measureHeap
-// 
-// 
-// 
-// 
-// 
+//
+//
+//
+//
+//
