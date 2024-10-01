@@ -33,7 +33,7 @@ struct SortMeasurement
 void heapify(int arr[], int n, int i);
 void heapsort(int arr[], int n);
 
-void bubbleSort(int arr[], int n);
+void bubbleSort(int arr[], int n, int &compCount, int &swapCount);
 
 void mergesort(int arr[], int n, int &compCount, int &swapCount);
 void merge(int size2, int size3, int array2[],
