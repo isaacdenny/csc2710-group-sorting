@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         DataSetType dataSetType;
     };
 
-    Dataset dataSets[9] = {
+    Dataset dataSets[NUM_DATASETS] = {
         {"./data/sorted/sorted-1000.txt", "Small Sorted", 1000, SORTED},
         {"./data/sorted/sorted-10000.txt", "Large Sorted", 10000, SORTED},
         {"./data/random/random-1000.txt", "Small Random", 1000, RANDOM},
