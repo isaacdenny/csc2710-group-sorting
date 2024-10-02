@@ -21,20 +21,21 @@ int main(int argc, char *argv[])
     struct Dataset
     {
         string filename;
+        string name;
         int dataSize;
         DataSetType dataSetType;
     };
 
     Dataset dataSets[9] = {
-        {"./data/sorted/sorted-1000.txt", 1000, SORTED},
-        {"./data/sorted/sorted-10000.txt", 10000, SORTED},
-        {"./data/random/random-1000.txt", 1000, RANDOM},
-        {"./data/random/random-10000.txt", 10000, RANDOM},
-        {"./data/duplicates/duplicates-1000.txt", 1000, DUPLICATES},
-        {"./data/duplicates/duplicates-10000.txt", 10000, DUPLICATES},
-        {"./data/reverse-sorted/reverse-sorted-1000.txt", 1000, REVERSE},
-        {"./data/reverse-sorted/reverse-sorted-10000.txt", 10000, REVERSE},
-        {"./data/professor-1000.txt", 1000, RANDOM},
+        {"./data/sorted/sorted-1000.txt", "Small Sorted", 1000, SORTED},
+        {"./data/sorted/sorted-10000.txt", "Large Sorted", 10000, SORTED},
+        {"./data/random/random-1000.txt", "Small Random", 1000, RANDOM},
+        {"./data/random/random-10000.txt", "Large Random", 10000, RANDOM},
+        {"./data/duplicates/duplicates-1000.txt", "Small Duplicates", 1000, DUPLICATES},
+        {"./data/duplicates/duplicates-10000.txt", "Large Duplicates", 10000, DUPLICATES},
+        {"./data/reverse-sorted/reverse-sorted-1000.txt", "Small Reverse Sorted", 1000, REVERSE},
+        {"./data/reverse-sorted/reverse-sorted-10000.txt", "Large Reverse Sorted", 10000, REVERSE},
+        {"./data/professor-1000.txt", "Professor Random", 1000, RANDOM},
     };
 
     SortMeasurement sms[100];
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < NUM_DATASETS; i++)
     {
         cout << endl
-             << setw(40) << dataSets[i].dataSetType << " - " << dataSets[i].dataSize << endl
+             << setw(40) << dataSets[i].name << " - " << dataSets[i].dataSize << endl
              << endl;
         cout << setw(20) << "Sort Type" << setw(20) << "Time (us)" << setw(20) << "Compares" << setw(20) << "Swaps" << endl;
         cout << setfill('-') << setw(80) << "-" << setfill(' ') << endl;
