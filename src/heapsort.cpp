@@ -9,18 +9,22 @@ void heapify(int arr[], int n, int i, int &compCount, int &swapCount)
     int l = 2 * i + 1;
     int r = 2 * i + 2;
 
+    compCount++;
     if (l < n && arr[i] < arr[l])
     {
         largest = l;
     }
 
+    compCount++;
     if (r < n && arr[largest] < arr[r])
     {
         largest = r;
     }
 
+    compCount++;
     if (largest != i)
     {
+        swapCount++;
         int temp = arr[i];
         arr[i] = arr[largest];
         arr[largest] = temp;
@@ -36,12 +40,12 @@ void heapsort(int arr[], int n, int &compCount, int &swapCount)
 
     int i, temp;
 
-    for (i = n - 1; i >= 0; i--)
+    for (i = n / 2 - 1; i >= 0; i--)
     {
         heapify(arr, n, i, compCount, swapCount);
     }
 
-    for (i = n; i >= 0; i--)
+    for (i = n - 1; i > 0; i--)
     {
         temp = arr[i];
         arr[i] = arr[0];

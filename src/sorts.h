@@ -1,14 +1,14 @@
 #ifndef SORTS_H
 #define SORTS_H
 
-enum dataSetType
+enum DataSetType
 {
     REVERSE,
     SORTED,
     RANDOM,
     DUPLICATES
 };
-enum sortType
+enum SortType
 {
     SELECTION,
     INSERTION,
@@ -23,8 +23,8 @@ enum sortType
 struct SortMeasurement
 {
     int time = 0, compares = 0, swaps = 0, inputSize = 0;
-    sortType sortType = SELECTION;
-    dataSetType dataType = SORTED;
+    SortType sortType = SELECTION;
+    DataSetType dataType = SORTED;
 };
 
 /*
