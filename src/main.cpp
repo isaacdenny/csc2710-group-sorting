@@ -107,8 +107,6 @@ int main(int argc, char *argv[])
         Jimi: write the sort measurements from sms array to file line by line like console output.
 
         use measurementOutputSample.csv for reference for what it should look like (comma separated .csv file)
-
-        Also! use the iomanip library to make a nice table in the console with the output
     */
 
     return 0;
