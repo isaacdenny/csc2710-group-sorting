@@ -4,20 +4,20 @@
 #include <chrono>
 
 void insertionSort(int arr[], int n, int& compCount, int& swapCount) {
-    for (int i = 1; i < n; ++i) {
-        int key = arr[i];
-        int j = i - 1;
-        // Compare the key with each element on the left
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];  // Perform a swap
+    int i, j;
+    for (i = 1; i < n; i++) { 
+        int x = arr[i];  // Keytype x
+        j = i - 1;
+        // Compare and shift elements
+        while (j >= 0 && arr[j] > x) {
+            arr[j + 1] = arr[j];  // Shift element to the right
             j--;
-            compCount++; // Count comparisons
-            swapCount++;       // Count swaps
+            compCount++;  // Count comparisons
+            swapCount++;        // Count shifts as swaps
         }
-        arr[j + 1] = key;  
-        compCount++;     // For the final comparison that breaks the while loop
-        if (j + 1 != i) {
-            swapCount++;       
-        }
+        // Place the key (x) in its correct position in the sorted part of the array
+        arr[j + 1] = x;  
+        swapCount++;  // Count the placement of the key as a swap
+        
     }
 }
