@@ -59,6 +59,12 @@ int main(int argc, char *argv[])
         std::cout << sms[i].time << std::endl;
     }
 
+    /*
+        Jimi: write the sort measurements from sms array to file line by line like console output.
+
+        use measurementOutputSample.csv for reference for what it should look like (comma separated .csv file)
+    */ 
+
     return 0;
 }
 
