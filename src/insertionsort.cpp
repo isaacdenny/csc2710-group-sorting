@@ -3,21 +3,23 @@
 #include <vector>
 #include <chrono>
 
-void insertionSort(int arr[], int n, int& compCount, int& swapCount) {
+void insertionSort(int arr[], int n, int &compCount, int &swapCount)
+{
     int i, j;
-    for (i = 1; i < n; i++) { 
-        int x = arr[i];  // Keytype x
+    for (i = 1; i < n; i++)
+    {
+        int x = arr[i]; // Keytype x
         j = i - 1;
         // Compare and shift elements
-        while (j >= 0 && arr[j] > x) {
-            arr[j + 1] = arr[j];  // Shift element to the right
+        compCount++; // Count comparisons
+        while (j >= 0 && arr[j] > x)
+        {
+            arr[j + 1] = arr[j]; // Shift element to the right
             j--;
-            compCount++;  // Count comparisons
-            swapCount++;        // Count shifts as swaps
+            swapCount++; // Count shifts as swaps
         }
         // Place the key (x) in its correct position in the sorted part of the array
-        arr[j + 1] = x;  
-        swapCount++;  // Count the placement of the key as a swap
-        
+        arr[j + 1] = x;
+        swapCount++; // Count the placement of the key as a swap
     }
 }

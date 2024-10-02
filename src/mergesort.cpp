@@ -1,4 +1,5 @@
 #include "sorts.h"
+#include <iostream>
 
 /*
 Author: Kevin Schoeberle
@@ -15,23 +16,21 @@ void merge(int size2, int size3, int array2[],
     // loops while indexes are less than the sizes of the arrays
     while (i < size2 && j < size3)
     {
-
         // checks if the value at selected index is lower than the one at the other
-        // if it is then swaps OG array with the value of the lowest value between
+        // if it is then overwrites OG array with the value of the lowest value between
         // the two compared
         compareCount++;
-        if (array2[i] < array3[j])
+        if (array2[i] <= array3[j])
         {
             array[k] = array2[i];
             i++;
         }
-
         else
         {
             array[k] = array3[j];
+            swapCount++;
             j++;
         }
-        swapCount++;
         k++;
     }
     // checks if the index is still less than the size at the left array
@@ -42,7 +41,6 @@ void merge(int size2, int size3, int array2[],
             array[k] = array2[i];
             i++;
             k++;
-            swapCount++;
         }
     }
     // checks if the index is still less than the size at the right array
@@ -53,7 +51,6 @@ void merge(int size2, int size3, int array2[],
             array[k] = array3[j];
             j++;
             k++;
-            swapCount++;
         }
     }
 }
@@ -70,6 +67,16 @@ void mergesort(int array[], int size, int &compCount, int &swapCount)
         // initializes arrays at runtime
         int *array2 = new int[size2];
         int *array3 = new int[size3];
+
+        for (int i = 0; i < size2; i++)
+        {
+            array2[i] = array[i];
+        }
+
+        for (int i = 0; i < size3; i++)
+        {
+            array3[i] = array[i + size2];
+        }
 
         // the logic to Mergesort
         mergesort(array2, size2, compCount, swapCount);
