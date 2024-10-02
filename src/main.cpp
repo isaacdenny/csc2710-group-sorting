@@ -60,39 +60,44 @@ int main(int argc, char *argv[])
         cout << setw(20) << "Sort Type" << setw(20) << "Time (us)" << setw(20) << "Compares" << setw(20) << "Swaps" << endl;
         cout << setfill('-') << setw(80) << "-" << setfill(' ') << endl;
         cout << setw(20) << "Selection Sort"
-             << setw(20) << sms[i + SELECTION].time
-             << setw(20) << sms[i + SELECTION].compares
-             << setw(20) << sms[i + SELECTION].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + SELECTION].time
+             << setw(20) << sms[i * NUM_SORTS + SELECTION].compares
+             << setw(20) << sms[i * NUM_SORTS + SELECTION].swaps << endl;
 
         cout << setw(20) << "Insertion Sort"
-             << setw(20) << sms[i + INSERTION].time
-             << setw(20) << sms[i + INSERTION].compares
-             << setw(20) << sms[i + INSERTION].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + INSERTION].time
+             << setw(20) << sms[i * NUM_SORTS + INSERTION].compares
+             << setw(20) << sms[i * NUM_SORTS + INSERTION].swaps << endl;
 
         cout << setw(20) << "Exchange Sort"
-             << setw(20) << sms[i + EXCHANGE].time
-             << setw(20) << sms[i + EXCHANGE].compares
-             << setw(20) << sms[i + EXCHANGE].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + EXCHANGE].time
+             << setw(20) << sms[i * NUM_SORTS + EXCHANGE].compares
+             << setw(20) << sms[i * NUM_SORTS + EXCHANGE].swaps << endl;
 
         cout << setw(20) << "Bubble Sort"
-             << setw(20) << sms[i + BUBBLE].time
-             << setw(20) << sms[i + BUBBLE].compares
-             << setw(20) << sms[i + BUBBLE].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + BUBBLE].time
+             << setw(20) << sms[i * NUM_SORTS + BUBBLE].compares
+             << setw(20) << sms[i * NUM_SORTS + BUBBLE].swaps << endl;
 
         cout << setw(20) << "Merge Sort"
-             << setw(20) << sms[i + MERGE].time
-             << setw(20) << sms[i + MERGE].compares
-             << setw(20) << sms[i + MERGE].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + MERGE].time
+             << setw(20) << sms[i * NUM_SORTS + MERGE].compares
+             << setw(20) << sms[i * NUM_SORTS + MERGE].swaps << endl;
 
         cout << setw(20) << "Quicksort"
-             << setw(20) << sms[i + QUICK].time
-             << setw(20) << sms[i + QUICK].compares
-             << setw(20) << sms[i + QUICK].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + QUICK].time
+             << setw(20) << sms[i * NUM_SORTS + QUICK].compares
+             << setw(20) << sms[i * NUM_SORTS + QUICK].swaps << endl;
 
         cout << setw(20) << "Heap Sort"
-             << setw(20) << sms[i + HEAP].time
-             << setw(20) << sms[i + HEAP].compares
-             << setw(20) << sms[i + HEAP].swaps << endl;
+             << setw(20) << sms[i * NUM_SORTS + HEAP].time
+             << setw(20) << sms[i * NUM_SORTS + HEAP].compares
+             << setw(20) << sms[i * NUM_SORTS + HEAP].swaps << endl;
+
+        cout << setw(20) << "Alexa's Heap Sort"
+             << setw(20) << sms[i * NUM_SORTS + HEAP_ALEXA].time
+             << setw(20) << sms[i * NUM_SORTS + HEAP_ALEXA].compares
+             << setw(20) << sms[i * NUM_SORTS + HEAP_ALEXA].swaps << endl;
 
         cout << setfill('-') << setw(80) << "-" << setfill(' ') << endl;
     }
@@ -174,6 +179,11 @@ SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType,
     auto duration = duration_cast<microseconds>(end - start).count();
 
     sm.compares = compCount;
+
+    if (sortType == MERGE)
+    {
+        cout << "Merge swaps: " << swapCount << endl;
+    }
     sm.swaps = swapCount;
     sm.time = duration;
 
