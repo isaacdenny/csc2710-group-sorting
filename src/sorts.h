@@ -1,6 +1,9 @@
 #ifndef SORTS_H
 #define SORTS_H
 
+#define NUM_SORTS 8
+#define NUM_DATASETS 9
+
 enum DataSetType
 {
     REVERSE,
@@ -16,7 +19,8 @@ enum SortType
     BUBBLE,
     MERGE,
     QUICK,
-    HEAP
+    HEAP,
+    HEAP_ALEXA
 };
 
 /* Used to measure a sort's performance on a dataset */
@@ -44,5 +48,15 @@ void quicksort(int arr[], int low, int high, int &compCount, int &swapCount);
 void exchangeSort(int arr[], int n, int &compCount, int &swapCount);
 void selectionSort(int arr[], int n, int &compCount, int &swapCount);
 void insertionSort(int arr[], int n, int &compCount, int &swapCount);
+
+// Alexa Heapsort
+
+struct heap
+{
+    int *S;       // S is indexed from 0 to (n-1)
+    int heapsize; // heapsize only takes the values 0 to n
+};
+
+void heapsortAlexa(int n, heap &H, int &compare_count, int &swap_count);
 
 #endif

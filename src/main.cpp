@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
     int measurementCount = 0;
     SortMeasurement sm;
 
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < NUM_DATASETS; i++)
     {
-        for (int j = 0; j < 7; j++)
+        for (int j = 0; j < NUM_SORTS; j++)
         {
             std::cout << i << "  " << static_cast<SortType>(j) << std::endl;
             sm = measureSort(dataSets[i].filename, dataSets[i].dataSize, dataSets[i].dataSetType, static_cast<SortType>(j));
@@ -61,11 +61,11 @@ int main(int argc, char *argv[])
 
     /*
         Jimi: write the sort measurements from sms array to file line by line like console output.
-        
+
         use measurementOutputSample.csv for reference for what it should look like (comma separated .csv file)
 
         Also! use the iomanip library to make a nice table in the console with the output
-    */ 
+    */
 
     return 0;
 }
@@ -121,6 +121,11 @@ SortMeasurement measureSort(std::string filename, int dataSize, DataSetType data
         break;
     case BUBBLE:
         bubbleSort(data, dataSize, compCount, swapCount);
+        break;
+    case HEAP_ALEXA:
+        heap H;
+        H.S = data;
+        heapsortAlexa(dataSize, H, compCount, swapCount);
         break;
     default:
         throw std::invalid_argument("dataSize must be greater than zero");
