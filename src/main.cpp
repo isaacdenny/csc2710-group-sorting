@@ -179,11 +179,6 @@ SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType,
     auto duration = duration_cast<microseconds>(end - start).count();
 
     sm.compares = compCount;
-
-    if (sortType == MERGE)
-    {
-        cout << "Merge swaps: " << swapCount << endl;
-    }
     sm.swaps = swapCount;
     sm.time = duration;
 
