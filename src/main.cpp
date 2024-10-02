@@ -58,6 +58,44 @@ int main(int argc, char *argv[])
         std::cout << sms[i].compares << " ";
         std::cout << sms[i].swaps << " ";
         std::cout << sms[i].time << std::endl;
+
+        std::cout << std::setw(20) << "Selection Sort"
+                  << std::setw(20) << sms[i + SELECTION].time
+                  << std::setw(20) << sms[i + SELECTION].compares
+                  << std::setw(20) << sms[i + SELECTION].swaps << std::endl;
+
+        std::cout << std::setw(20) << "Exchange Sort"
+                  << std::setw(20) << sms[i + EXCHANGE].time
+                  << std::setw(20) << sms[i + EXCHANGE].compares
+                  << std::setw(20) << sms[i + EXCHANGE].swaps << std::endl;
+
+        std::cout << std::setw(20) << "Bubble Sort"
+                  << std::setw(20) << sms[i + BUBBLE].time
+                  << std::setw(20) << sms[i + BUBBLE].compares
+                  << std::setw(20) << sms[i + BUBBLE].swaps << std::endl;
+
+        std::cout << std::setw(20) << "Insertion Sort"
+                  << std::setw(20) << sms[i + INSERTION].time
+                  << std::setw(20) << sms[i + INSERTION].compares
+                  << std::setw(20) << sms[i + INSERTION].swaps << std::endl;
+
+        std::cout << std::setw(20) << "Merge Sort"
+                  << std::setw(20) << sms[i + MERGE].time
+                  << std::setw(20) << sms[i + MERGE].compares
+                  << std::setw(20) << sms[i + MERGE].swaps << std::endl;
+
+        std::cout << std::setw(20) << "Quicksort"
+                  << std::setw(20) << sms[i + QUICK].time
+                  << std::setw(20) << sms[i + QUICK].compares
+                  << std::setw(20) << sms[i + QUICK].swaps << std::endl;
+
+        std::cout << std::setw(20) << "Heap Sort"
+                  << std::setw(20) << sms[i + HEAP].time
+                  << std::setw(20) << sms[i + HEAP].compares
+                  << std::setw(20) << sms[i + HEAP].swaps << std::endl;
+
+        std::cout << std::setfill('-') << std::setw(80) << "-" << std::setfill(' ') << std::endl;
+
     }
 
     /*
