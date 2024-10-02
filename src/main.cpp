@@ -6,8 +6,9 @@
 #include <iomanip>
 
 using namespace std::chrono;
+using namespace std;
 
-SortMeasurement measureSort(std::string filename, int dataSize, DataSetType dataType, SortType sortType);
+SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType, SortType sortType);
 
 int main(int argc, char *argv[])
 {
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
     */
     struct Dataset
     {
-        std::string filename;
+        string filename;
         int dataSize;
         DataSetType dataSetType;
     };
@@ -44,58 +45,56 @@ int main(int argc, char *argv[])
     {
         for (int j = 0; j < NUM_SORTS; j++)
         {
-            std::cout << i << "  " << static_cast<SortType>(j) << std::endl;
+            cout << i << "  " << static_cast<SortType>(j) << endl;
             sm = measureSort(dataSets[i].filename, dataSets[i].dataSize, dataSets[i].dataSetType, static_cast<SortType>(j));
             sms[measurementCount] = sm;
             measurementCount++;
         }
     }
 
-    for (int i = 0; i < measurementCount; i++)
+    for (int i = 0; i < NUM_DATASETS; i++)
     {
-        std::cout << sms[i].inputSize << " ";
-        std::cout << sms[i].sortType << " ";
-        std::cout << sms[i].compares << " ";
-        std::cout << sms[i].swaps << " ";
-        std::cout << sms[i].time << std::endl;
+        cout << endl
+             << setw(40) << dataSets[i].dataSetType << " - " << dataSets[i].dataSize << endl
+             << endl;
+        cout << setw(20) << "Sort Type" << setw(20) << "Time (us)" << setw(20) << "Compares" << setw(20) << "Swaps" << endl;
+        cout << setfill('-') << setw(80) << "-" << setfill(' ') << endl;
+        cout << setw(20) << "Selection Sort"
+             << setw(20) << sms[i + SELECTION].time
+             << setw(20) << sms[i + SELECTION].compares
+             << setw(20) << sms[i + SELECTION].swaps << endl;
 
-        std::cout << std::setw(20) << "Selection Sort"
-                  << std::setw(20) << sms[i + SELECTION].time
-                  << std::setw(20) << sms[i + SELECTION].compares
-                  << std::setw(20) << sms[i + SELECTION].swaps << std::endl;
+        cout << setw(20) << "Insertion Sort"
+             << setw(20) << sms[i + INSERTION].time
+             << setw(20) << sms[i + INSERTION].compares
+             << setw(20) << sms[i + INSERTION].swaps << endl;
 
-        std::cout << std::setw(20) << "Exchange Sort"
-                  << std::setw(20) << sms[i + EXCHANGE].time
-                  << std::setw(20) << sms[i + EXCHANGE].compares
-                  << std::setw(20) << sms[i + EXCHANGE].swaps << std::endl;
+        cout << setw(20) << "Exchange Sort"
+             << setw(20) << sms[i + EXCHANGE].time
+             << setw(20) << sms[i + EXCHANGE].compares
+             << setw(20) << sms[i + EXCHANGE].swaps << endl;
 
-        std::cout << std::setw(20) << "Bubble Sort"
-                  << std::setw(20) << sms[i + BUBBLE].time
-                  << std::setw(20) << sms[i + BUBBLE].compares
-                  << std::setw(20) << sms[i + BUBBLE].swaps << std::endl;
+        cout << setw(20) << "Bubble Sort"
+             << setw(20) << sms[i + BUBBLE].time
+             << setw(20) << sms[i + BUBBLE].compares
+             << setw(20) << sms[i + BUBBLE].swaps << endl;
 
-        std::cout << std::setw(20) << "Insertion Sort"
-                  << std::setw(20) << sms[i + INSERTION].time
-                  << std::setw(20) << sms[i + INSERTION].compares
-                  << std::setw(20) << sms[i + INSERTION].swaps << std::endl;
+        cout << setw(20) << "Merge Sort"
+             << setw(20) << sms[i + MERGE].time
+             << setw(20) << sms[i + MERGE].compares
+             << setw(20) << sms[i + MERGE].swaps << endl;
 
-        std::cout << std::setw(20) << "Merge Sort"
-                  << std::setw(20) << sms[i + MERGE].time
-                  << std::setw(20) << sms[i + MERGE].compares
-                  << std::setw(20) << sms[i + MERGE].swaps << std::endl;
+        cout << setw(20) << "Quicksort"
+             << setw(20) << sms[i + QUICK].time
+             << setw(20) << sms[i + QUICK].compares
+             << setw(20) << sms[i + QUICK].swaps << endl;
 
-        std::cout << std::setw(20) << "Quicksort"
-                  << std::setw(20) << sms[i + QUICK].time
-                  << std::setw(20) << sms[i + QUICK].compares
-                  << std::setw(20) << sms[i + QUICK].swaps << std::endl;
+        cout << setw(20) << "Heap Sort"
+             << setw(20) << sms[i + HEAP].time
+             << setw(20) << sms[i + HEAP].compares
+             << setw(20) << sms[i + HEAP].swaps << endl;
 
-        std::cout << std::setw(20) << "Heap Sort"
-                  << std::setw(20) << sms[i + HEAP].time
-                  << std::setw(20) << sms[i + HEAP].compares
-                  << std::setw(20) << sms[i + HEAP].swaps << std::endl;
-
-        std::cout << std::setfill('-') << std::setw(80) << "-" << std::setfill(' ') << std::endl;
-
+        cout << setfill('-') << setw(80) << "-" << setfill(' ') << endl;
     }
 
     /*
@@ -120,11 +119,11 @@ int main(int argc, char *argv[])
 
     @returns a SortMeasurement object with data about the sort performance
 */
-SortMeasurement measureSort(std::string filename, int dataSize, DataSetType dataType, SortType sortType)
+SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType, SortType sortType)
 {
     if (dataSize <= 0)
     {
-        throw std::invalid_argument("dataSize must be greater than zero");
+        throw invalid_argument("dataSize must be greater than zero");
     }
 
     int *data = new int[dataSize];
@@ -167,7 +166,7 @@ SortMeasurement measureSort(std::string filename, int dataSize, DataSetType data
         heapsortAlexa(dataSize, H, compCount, swapCount);
         break;
     default:
-        throw std::invalid_argument("dataSize must be greater than zero");
+        throw invalid_argument("dataSize must be greater than zero");
         break;
     }
 
