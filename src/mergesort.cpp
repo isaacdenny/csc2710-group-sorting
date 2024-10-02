@@ -20,18 +20,17 @@ void merge(int size2, int size3, int array2[],
         // if it is then swaps OG array with the value of the lowest value between
         // the two compared
         compareCount++;
-        if (array2[i] < array3[j])
+        if (array2[i] <= array3[j])
         {
             array[k] = array2[i];
             i++;
         }
-
         else
         {
             array[k] = array3[j];
+            swapCount++;
             j++;
         }
-        swapCount++;
         k++;
     }
     // checks if the index is still less than the size at the left array
@@ -42,7 +41,6 @@ void merge(int size2, int size3, int array2[],
             array[k] = array2[i];
             i++;
             k++;
-            swapCount++;
         }
     }
     // checks if the index is still less than the size at the right array
@@ -53,7 +51,6 @@ void merge(int size2, int size3, int array2[],
             array[k] = array3[j];
             j++;
             k++;
-            swapCount++;
         }
     }
 }
