@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
         {"./data/duplicates/duplicates-1000.txt", 1000, DUPLICATES},
         {"./data/duplicates/duplicates-10000.txt", 10000, DUPLICATES},
         {"./data/reverse-sorted/reverse-sorted-1000.txt", 1000, REVERSE},
-        {"./data/reverse-sorted/reverse-sorted-10000.txt", 1000, REVERSE},
+        {"./data/reverse-sorted/reverse-sorted-10000.txt", 10000, REVERSE},
         {"./data/professor-1000.txt", 1000, RANDOM},
     };
 
