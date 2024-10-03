@@ -13,7 +13,7 @@ void displayProgress(double progress, string setName, SortType sortType, int dat
 
 const string sortNames[8] = {"SELECTION", "INSERTION", "EXCHANGE", "BUBBLE", "MERGE", "QUICK", "HEAP", "HEAP_ALEXA"};
 
-int main(int argc, char *argv[])
+int main()
 {
     /*
         1. Define algorithm result data format (what do we need to calculate)
@@ -32,8 +32,7 @@ int main(int argc, char *argv[])
     Dataset dataSets[NUM_DATASETS] = {
         {"./data/sorted/sorted-1000.txt", "Small Sorted", 1000, SORTED},
         {"./data/sorted/sorted-10000.txt", "Medium Sorted", 10000, SORTED},
-        {"./data/sorted/sorted-50000.txt", "Large Sorted", 50000, SORTED},
-        {"./data/sorted/sorted-100000.txt", "X Large Sorted", 100000, SORTED},
+        {"./data/sorted/sorted-50000.txt", "Large Sorted", 20000, SORTED},
         {"./data/random/random-1000.txt", "Small Random", 1000, RANDOM},
         {"./data/random/random-10000.txt", "Medium Random", 10000, RANDOM},
         {"./data/random/random-50000.txt", "Large Random", 50000, RANDOM},
@@ -44,8 +43,7 @@ int main(int argc, char *argv[])
         {"./data/duplicates/duplicates-100000.txt", "X Large Duplicates", 100000, DUPLICATES},
         {"./data/reverse-sorted/reverse-sorted-1000.txt", "Small Reverse Sorted", 1000, REVERSE},
         {"./data/reverse-sorted/reverse-sorted-10000.txt", "Medium Reverse Sorted", 10000, REVERSE},
-        {"./data/reverse-sorted/reverse-sorted-50000.txt", "Large Reverse Sorted", 50000, REVERSE},
-        {"./data/reverse-sorted/reverse-sorted-100000.txt", "X Large Reverse Sorted", 100000, REVERSE},
+        {"./data/reverse-sorted/reverse-sorted-50000.txt", "Large Reverse Sorted", 20000, REVERSE},
         {"./data/professor-1000.txt", "Professor Random", 1000, RANDOM},
     };
 
@@ -57,11 +55,11 @@ int main(int argc, char *argv[])
     {
         for (int j = 0; j < NUM_SORTS; j++)
         {
+            displayProgress((double)(i * NUM_SORTS + j) / (NUM_DATASETS * NUM_SORTS), dataSets[i].name, static_cast<SortType>(j), dataSets[i].dataSize);
+
             sm = measureSort(dataSets[i].filename, dataSets[i].dataSize, dataSets[i].dataSetType, static_cast<SortType>(j));
             sms[measurementCount] = sm;
             measurementCount++;
-
-            displayProgress((double)(i * NUM_SORTS + j) / (NUM_DATASETS * NUM_SORTS), dataSets[i].name, static_cast<SortType>(j), dataSets[i].dataSize);
         }
     }
 

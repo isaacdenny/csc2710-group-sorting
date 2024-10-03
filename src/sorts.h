@@ -2,7 +2,7 @@
 #define SORTS_H
 
 #define NUM_SORTS 8
-#define NUM_DATASETS 17
+#define NUM_DATASETS 15
 
 #include <string>
 

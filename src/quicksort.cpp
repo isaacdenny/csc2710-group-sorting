@@ -7,7 +7,7 @@ void qspartition(int arr[], int low, int high, int &pivotpoint, int &compCount, 
 
     for (int i = low + 1; i <= high; i++) // Partition the array around the pivot
     {
-        compCount++;        // Increment the comparison count
+        compCount++;            // Increment the comparison count
         if (arr[i] < pivotitem) // If the current element is less than the pivot
         {
             j++;
@@ -26,9 +26,9 @@ void qspartition(int arr[], int low, int high, int &pivotpoint, int &compCount, 
 
 void quicksort(int arr[], int low, int high, int &compCount, int &swapCount)
 {
+    int pivotpoint; // Index of the pivot element
     if (high > low)
     {
-        int pivotpoint;                                                    // Index of the pivot element
         qspartition(arr, low, high, pivotpoint, compCount, swapCount); // Partition the array
         quicksort(arr, low, pivotpoint - 1, compCount, swapCount);     // Sort the low partition
         quicksort(arr, pivotpoint + 1, high, compCount, swapCount);    // Sort the high partition
