@@ -9,6 +9,9 @@ using namespace std::chrono;
 using namespace std;
 
 SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType, SortType sortType);
+void displayProgress(double progress, string setName, SortType sortType, int dataSize);
+
+const string sortNames[8] = {"SELECTION", "INSERTION", "EXCHANGE", "BUBBLE", "MERGE", "QUICK", "HEAP", "HEAP_ALEXA"};
 
 int main(int argc, char *argv[])
 {
@@ -28,17 +31,25 @@ int main(int argc, char *argv[])
 
     Dataset dataSets[NUM_DATASETS] = {
         {"./data/sorted/sorted-1000.txt", "Small Sorted", 1000, SORTED},
-        {"./data/sorted/sorted-10000.txt", "Large Sorted", 10000, SORTED},
+        {"./data/sorted/sorted-10000.txt", "Medium Sorted", 10000, SORTED},
+        {"./data/sorted/sorted-50000.txt", "Large Sorted", 50000, SORTED},
+        {"./data/sorted/sorted-100000.txt", "X Large Sorted", 100000, SORTED},
         {"./data/random/random-1000.txt", "Small Random", 1000, RANDOM},
-        {"./data/random/random-10000.txt", "Large Random", 10000, RANDOM},
+        {"./data/random/random-10000.txt", "Medium Random", 10000, RANDOM},
+        {"./data/random/random-50000.txt", "Large Random", 50000, RANDOM},
+        {"./data/random/random-100000.txt", "X Large Random", 100000, RANDOM},
         {"./data/duplicates/duplicates-1000.txt", "Small Duplicates", 1000, DUPLICATES},
-        {"./data/duplicates/duplicates-10000.txt", "Large Duplicates", 10000, DUPLICATES},
+        {"./data/duplicates/duplicates-10000.txt", "Medium Duplicates", 10000, DUPLICATES},
+        {"./data/duplicates/duplicates-50000.txt", "Large Duplicates", 50000, DUPLICATES},
+        {"./data/duplicates/duplicates-100000.txt", "X Large Duplicates", 100000, DUPLICATES},
         {"./data/reverse-sorted/reverse-sorted-1000.txt", "Small Reverse Sorted", 1000, REVERSE},
-        {"./data/reverse-sorted/reverse-sorted-10000.txt", "Large Reverse Sorted", 10000, REVERSE},
+        {"./data/reverse-sorted/reverse-sorted-10000.txt", "Medium Reverse Sorted", 10000, REVERSE},
+        {"./data/reverse-sorted/reverse-sorted-50000.txt", "Large Reverse Sorted", 50000, REVERSE},
+        {"./data/reverse-sorted/reverse-sorted-100000.txt", "X Large Reverse Sorted", 100000, REVERSE},
         {"./data/professor-1000.txt", "Professor Random", 1000, RANDOM},
     };
 
-    SortMeasurement sms[100];
+    SortMeasurement sms[NUM_DATASETS * NUM_SORTS]; // One measurement for each Dataset/Sort pair
     int measurementCount = 0;
     SortMeasurement sm;
 
@@ -46,10 +57,11 @@ int main(int argc, char *argv[])
     {
         for (int j = 0; j < NUM_SORTS; j++)
         {
-            cout << i << "  " << static_cast<SortType>(j) << endl;
             sm = measureSort(dataSets[i].filename, dataSets[i].dataSize, dataSets[i].dataSetType, static_cast<SortType>(j));
             sms[measurementCount] = sm;
             measurementCount++;
+
+            displayProgress((double)(i * NUM_SORTS + j) / (NUM_DATASETS * NUM_SORTS), dataSets[i].name, static_cast<SortType>(j), dataSets[i].dataSize);
         }
     }
 
@@ -184,4 +196,25 @@ SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType,
     delete[] data;
 
     return sm;
+}
+
+void displayProgress(double progress, string setName, SortType sortType, int dataSize)
+{
+    int barWidth = 80;
+    int pos = barWidth * progress;
+
+    cout.flush();
+    cout << "Measuring: " << sortNames[sortType] << " on " << setName << " - " << dataSize << " ";
+
+    cout << "[";
+    for (int i = 0; i < barWidth; ++i)
+    {
+        if (i < pos)
+            cout << "=";
+        else if (i == pos)
+            cout << ">";
+        else
+            cout << " ";
+    }
+    cout << "] " << int(progress * 100.0) << " %\r";
 }

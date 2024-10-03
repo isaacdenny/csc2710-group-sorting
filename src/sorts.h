@@ -2,7 +2,9 @@
 #define SORTS_H
 
 #define NUM_SORTS 8
-#define NUM_DATASETS 9
+#define NUM_DATASETS 17
+
+#include <string>
 
 enum DataSetType
 {
