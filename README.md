@@ -21,16 +21,15 @@ The group sorting project for CSC2710
 
 ## 2. Design Project Structure & Flow
 
-### How can this be used?
+1. Read Data to memory
+2. Measure each sort/dataset pair
+3. Record measurements to csv file
+4. Display with Python and R
 
-### How will we present?
+### What is the most important part of the code to focus on in Presentation?
 
-- Show code?
-- Show results?
-
-### What is the most important part of the code to focus on?
-
-Measurement accuracy and amount - structure of main function bringing the algorithms together
+- [x] Structure of main function bringing the algorithms together
+- [x] Measurement results and meaning
 
 ## 3. Dataset Building
 
@@ -66,10 +65,19 @@ We needed to make sure our program handled the dataset in memory correctly:
 
 ![Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-ALL.png?raw=true)
 ![Sorted Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-TABLE.png?raw=true)
+
+---
+
 ![Reverse Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/REVERSE-ALL.png?raw=true)
 ![Reverse Sorted Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/REVERSE-TABLE.png?raw=true)
+
+--- 
+
 ![Random Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/RANDOM-ALL.png?raw=true)
 ![Random Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/RANDOM-TABLE.png?raw=true)
+
+---
+
 ![Duplicates Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATE-ALL.png?raw=true)
 ![Duplicates Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATES-TABLE.png?raw=true)
 
