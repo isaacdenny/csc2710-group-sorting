@@ -65,9 +65,13 @@ We needed to make sure our program handled the dataset in memory correctly:
 ## 4. Results
 
 ![Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-ALL.png?raw=true)
+![Sorted Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-TABLE.png?raw=true)
 ![Reverse Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/REVERSE-ALL.png?raw=true)
+![Reverse Sorted Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/REVERSE-TABLE.png?raw=true)
 ![Random Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/RANDOM-ALL.png?raw=true)
+![Random Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/RANDOM-TABLE.png?raw=true)
 ![Duplicates Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATE-ALL.png?raw=true)
+![Duplicates Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATES-TABLE.png?raw=true)
 
 ## 5. Questions To Answer In Presentation
 
