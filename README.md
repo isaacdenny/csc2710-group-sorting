@@ -64,6 +64,7 @@ We needed to make sure our program handled the dataset in memory correctly:
 ## 4. Results
 
 ![Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-ALL.png?raw=true)
+![Sorted Dataset Results R](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-COMPARE-R.png?raw=true)
 ![Sorted Dataset Table](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-TABLE.png?raw=true)
 
 ---
