@@ -216,7 +216,7 @@ SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType,
 
 void displayProgress(double progress, string setName, SortType sortType, int dataSize)
 {
-    int barWidth = 80;
+    int barWidth = 50;
     int pos = barWidth * progress;
 
     cout.flush();
