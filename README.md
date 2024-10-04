@@ -19,7 +19,7 @@ The group sorting project for CSC2710
 - Isaac - Heap
 - Jimi - Compile all other sorts into project
 
-## 2. Design Project Structure & Flow - TODO - Next time we meet
+## 2. Design Project Structure & Flow
 
 ### How can this be used?
 
@@ -32,23 +32,44 @@ The group sorting project for CSC2710
 
 Measurement accuracy and amount - structure of main function bringing the algorithms together
 
-## 3. Dataset Building - TODO - Next time we meet
+## 3. Dataset Building
 
-- What datasets? (need 4)
+### What dataset? (need 4)
 
 - [x] Almost sorted
-- [x] Randomly distributed
 - [x] Reverse sorted
+- [x] Randomly distributed
 - [x] Many Duplicates
 
 We wanted to find a dataset library that has already been set up for us so we could focus on  sample amount, measurement implementation, and presentation. We found and downloaded a [Benchmark Dataset for Sorting Algorithms](https://www.kaggle.com/datasets/bekiremirhanakay/benchmark-dataset-for-sorting-algorithms?select=ordered) from Kaggle that was free and legal to use under the license provided at the link.
 
+### Data Size
+
 We sifted through the data and picked a few sample sizes that fit our needs:
 
-- TODO Describe sample size choices here
-- talk about how the data was in floating point format and how we got around that
+1. Sorted - 1000, 10000, 20000
+2. Reverse sorted - 1000, 10000, 20000
+3. Random - 1000, 10000, 50000, 100000
+4. Duplicates - 1000, 10000, 50000, 100000
 
-## 4. Questions To Answer In Presentation
+The textbook's Quicksort implementation uses the first element of each recursed subarray as the pivot, which hinders the algorithm's performance on Sorted and Reverse Sorted data. When running on a sorted set of only 50000 elements, we encountered a stack overflow and needed to drop the element size to 20000.
+
+### Reading The Dataset To Memory
+
+We needed to make sure our program handled the dataset in memory correctly:
+
+- [x] The dataset files use floating point values on each line, so we read them to memory as doubles and then truncated them by casting to ints
+- [x] The application measures one sort/dataset pair at a time so we can deallocate the memory used and be ready for the next measurement
+- [x] In the larger datasets, our swap and compare counters began to overflow, so we transitioned to using unsigned 64-bit integers in each measurement
+
+## 4. Results
+
+![Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTING-ALL.png?raw=true)
+![Reverse Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/REVERSE-ALL.png?raw=true)
+![Random Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/RANDOM-ALL.png?raw=true)
+![Duplicates Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATES-ALL.png?raw=true)
+
+## 5. Questions To Answer In Presentation
 
 1. A description of your teams’ approach to the assignment. Your presentation should present your
 results and summarize what your team learned about the various sorting.
