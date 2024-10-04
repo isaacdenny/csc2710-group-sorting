@@ -1,0 +1,79 @@
+table(measurementOutput)
+
+```{r}
+# Load ggplot2 if you haven't already
+library(ggplot2)
+
+# Create the line graph
+ggplot(data = measurementOutput, aes(x = input_size, y = compares, color = factor(sort_type))) +
+  geom_line() +
+  labs(title = "Comparison of Sort Types by Input Size",
+       x = "Input Size",
+       y = "Number of Comparisons",
+       color = "Sort Type") +
+  scale_color_manual(values = rainbow(8), 
+                     labels = c("Selection Sort", 
+                                "Insertion Sort", 
+                                "Exchange Sort", 
+                                "Bubble Sort", 
+                                "Merge Sort", 
+                                "Quick Sort", 
+                                "Heap Sort", 
+                                "Alexa's Heap Sort")) +
+  theme_minimal()
+
+
+
+```
+```{r}
+# Load ggplot2 if you haven't already
+library(ggplot2)
+
+# Create the line graph
+ggplot(data = measurementOutput, aes(x = input_size, y = time_microsec, color = factor(sort_type))) +
+  geom_line() +
+  labs(title = "Comparison of Sort Types by Input Size",
+       x = "Input Size",
+       y = "Time taken in MS",
+       color = "Sort Type") +
+  scale_color_manual(values = rainbow(8), 
+                     labels = c("Selection Sort", 
+                                "Insertion Sort", 
+                                "Exchange Sort", 
+                                "Bubble Sort", 
+                                "Merge Sort", 
+                                "Quick Sort", 
+                                "Heap Sort", 
+                                "Alexa's Heap Sort")) +
+  theme_minimal()
+
+
+
+```
+
+
+```{r}
+# Load ggplot2 if you haven't already
+library(ggplot2)
+
+# Create the line graph
+ggplot(data = measurementOutput, aes(x = input_size, y = swaps, color = factor(sort_type))) +
+  geom_line() +
+  labs(title = "Comparison of Sort Types by Input Size",
+       x = "Input Size",
+       y = "Number of Swaps",
+       color = "Sort Type") +
+  scale_color_manual(values = rainbow(8), 
+                     labels = c("Selection Sort", 
+                                "Insertion Sort", 
+                                "Exchange Sort", 
+                                "Bubble Sort", 
+                                "Merge Sort", 
+                                "Quick Sort", 
+                                "Heap Sort", 
+                                "Alexa's Heap Sort")) +
+  theme_minimal()
+
+
+
+```
