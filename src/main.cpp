@@ -4,6 +4,7 @@
 #include <iostream>
 #include <chrono>
 #include <iomanip>
+#include <fstream>
 
 using namespace std::chrono;
 using namespace std;
@@ -113,11 +114,28 @@ int main()
         cout << setfill('-') << setw(80) << "-" << setfill(' ') << endl;
     }
 
-    /*
-        Jimi: write the sort measurements from sms array to file line by line like console output.
+    fstream fs;
+    fs.open("measurementOutput.csv", fstream::out);
 
-        use measurementOutputSample.csv for reference for what it should look like (comma separated .csv file)
-    */
+    if (!fs.is_open()) {
+        cout << "Error writing output to file";
+        return 1;
+    }
+
+    fs << "sort_type,data_type,input_size,compares,swaps,time_microsec\r";
+    for (int i = 0; i < measurementCount; i++)
+    {
+        fs << sms[i].sortType << ",";
+        fs << sms[i].dataType << ",";
+        fs << sms[i].inputSize << ",";
+        fs << sms[i].compares << ",";
+        fs << sms[i].swaps << ",";
+        fs << sms[i].time << "\r";
+    }
+
+    fs.close();
+
+    cout << "Measurements written to file";
 
     return 0;
 }
