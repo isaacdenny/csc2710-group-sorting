@@ -13,11 +13,11 @@ The group sorting project for CSC2710
 
 ---
 
-- (Josh)[https://github.com/joshsw2005] - Insertion
-- (Kevin)[https://github.com/kdogmixtape] - Merge
-- (Graham)[https://github.com/gmccabe21212] - Bubble
-- (Isaac)[https://github.com/isaacdenny] - Heap
-- (Jimi)[https://github.com/baners123] - Compile all other sorts into project
+- [Josh](https://github.com/joshsw2005) - Insertion
+- [Kevin](https://github.com/kdogmixtape) - Merge
+- [Graham](https://github.com/gmccabe21212) - Bubble
+- [Isaac](https://github.com/isaacdenny) - Heap
+- [Jimi](https://github.com/baners123) - Compile all other sorts into projec)
 
 ## 2. Design Project Structure & Flow
 
