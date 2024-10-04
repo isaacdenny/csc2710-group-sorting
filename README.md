@@ -58,3 +58,18 @@ it do so. In computer science, it is quite normal for an attempted solution to f
 targeted goals. Some of the most successful software ever created has been built on the foundation of a
 few previous failed attempts where teams tried a solution and failed, but they gained valuable knowledge
 into why a certain approach will not work
+
+## 5. Running The Project Locally
+
+### C++ Code
+1. Ensure g++ is installed and configured
+2. In the project root directory, compile the src folder `g++ ./src/*.cpp`
+3. Run the output file
+4. See console for progress and results, check written data output `measurementOutput` for all measurement data
+
+### Python Graphs Using Matplotlib
+1. Ensure python and pip are installed and configured
+2. Navigate to project root directory
+3. Create a python virtual environment: `python -m venv ./venv`
+4. Install dependencies: `pip install -r ./requirements.txt`
+5. After running the C++ application and aquiring measurementOutput.csv, run the python app: `python main.py`
