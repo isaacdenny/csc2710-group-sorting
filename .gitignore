@@ -97,3 +97,4 @@ testresults/
 # Temporary files
 *.tmp
 *.log
+*.csv
