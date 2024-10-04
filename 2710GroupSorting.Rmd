@@ -5,12 +5,14 @@ table(measurementOutput)
 library(ggplot2)
 
 # Create the line graph
-ggplot(data = measurementOutput, aes(x = input_size, y = compares, color = factor(sort_type))) +
+ggplot(data = Untitled.spreadsheet...DataType1, aes(x = input_size, y = compares, color = factor(sort_type)), scale_y_log10()) +
   geom_line() +
   labs(title = "Comparison of Sort Types by Input Size",
        x = "Input Size",
        y = "Number of Comparisons",
        color = "Sort Type") +
+       scale_y_log10() +  # Apply log10 scale to y-axis 
+
   scale_color_manual(values = rainbow(8), 
                      labels = c("Selection Sort", 
                                 "Insertion Sort", 
@@ -30,8 +32,10 @@ ggplot(data = measurementOutput, aes(x = input_size, y = compares, color = facto
 library(ggplot2)
 
 # Create the line graph
-ggplot(data = measurementOutput, aes(x = input_size, y = time_microsec, color = factor(sort_type))) +
+ggplot(data = Untitled.spreadsheet...DataType1, aes(x = input_size, y = time_microsec, color = factor(sort_type))) +
   geom_line() +
+  scale_y_log10() +  # Apply log10 scale to y-axis
+
   labs(title = "Comparison of Sort Types by Input Size",
        x = "Input Size",
        y = "Time taken in MS",
@@ -57,8 +61,10 @@ ggplot(data = measurementOutput, aes(x = input_size, y = time_microsec, color = 
 library(ggplot2)
 
 # Create the line graph
-ggplot(data = measurementOutput, aes(x = input_size, y = swaps, color = factor(sort_type))) +
+ggplot(data = Untitled.spreadsheet...DataType1, aes(x = input_size, y = swaps, color = factor(sort_type))) +
   geom_line() +
+  scale_y_log10() +  # Apply log10 scale to y-axis
+
   labs(title = "Comparison of Sort Types by Input Size",
        x = "Input Size",
        y = "Number of Swaps",
