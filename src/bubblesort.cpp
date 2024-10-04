@@ -1,6 +1,6 @@
 #include "sorts.h"
 
-void bubbleSort(int arr[], int n, int &compCount, int &swapCount)
+void bubbleSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount)
 {
 
     bool notSorted = true;

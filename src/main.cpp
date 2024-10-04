@@ -117,7 +117,8 @@ int main()
     fstream fs;
     fs.open("measurementOutput.csv", fstream::out);
 
-    if (!fs.is_open()) {
+    if (!fs.is_open())
+    {
         cout << "Error writing output to file";
         return 1;
     }
@@ -166,7 +167,7 @@ SortMeasurement measureSort(string filename, int dataSize, DataSetType dataType,
     sm.dataType = dataType;
     sm.inputSize = dataSize;
 
-    int compCount = 0, swapCount = 0;
+    uint64_t compCount = 0, swapCount = 0;
     auto start = high_resolution_clock::now();
 
     switch (sortType)

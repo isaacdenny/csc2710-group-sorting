@@ -7,7 +7,7 @@ Mergesort
 */
 void merge(int size2, int size3, int array2[],
            int array3[],
-           int array[], int &compareCount, int &swapCount)
+           int array[], uint64_t &compareCount, uint64_t &swapCount)
 {
     int i, j, k;
     i = 0, j = 0, k = 0;
@@ -56,7 +56,7 @@ void merge(int size2, int size3, int array2[],
 }
 
 // Mergesort main function
-void mergesort(int array[], int size, int &compCount, int &swapCount)
+void mergesort(int array[], int size, uint64_t &compCount, uint64_t &swapCount)
 {
     if (size > 1)
     {

@@ -1,6 +1,6 @@
 #include "sorts.h"
 
-void exchangeSort(int arr[], int n, int &compCount, int &swapCount)
+void exchangeSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount)
 {
     for (int i = 0; i < n; i++)
     {

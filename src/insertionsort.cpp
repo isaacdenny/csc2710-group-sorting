@@ -3,7 +3,7 @@
 #include <vector>
 #include <chrono>
 
-void insertionSort(int arr[], int n, int &compCount, int &swapCount)
+void insertionSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount)
 {
     int i, j;
     for (i = 1; i < n; i++)

@@ -28,7 +28,7 @@ enum SortType
 /* Used to measure a sort's performance on a dataset */
 struct SortMeasurement
 {
-    int time = 0, compares = 0, swaps = 0, inputSize = 0;
+    uint64_t time = 0, compares = 0, swaps = 0, inputSize = 0;
     SortType sortType = SELECTION;
     DataSetType dataType = SORTED;
 };
@@ -36,20 +36,20 @@ struct SortMeasurement
 /*
     All of our sorting function headers can go here so we can include them in the main driver file
 */
-void heapify(int arr[], int n, int i, int &compCount, int &swapCount);
-void heapsort(int arr[], int n, int &compCount, int &swapCount);
+void heapify(int arr[], int n, int i, uint64_t &compCount, uint64_t &swapCount);
+void heapsort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount);
 
-void bubbleSort(int arr[], int n, int &compCount, int &swapCount);
+void bubbleSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount);
 
-void mergesort(int arr[], int n, int &compCount, int &swapCount);
-void merge(int size2, int size3, int array2[], int array3[], int array[], int &compCount, int &swapCount);
+void mergesort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount);
+void merge(int size2, int size3, int array2[], int array3[], int array[], uint64_t &compCount, uint64_t &swapCount);
 
-void qspartition(int arr[], int low, int high, int &pivotpoint, int &compCount, int &swapCount);
-void quicksort(int arr[], int low, int high, int &compCount, int &swapCount);
+void qspartition(int arr[], int low, int high, int &pivotpoint, uint64_t &compCount, uint64_t &swapCount);
+void quicksort(int arr[], int low, int high, uint64_t &compCount, uint64_t &swapCount);
 
-void exchangeSort(int arr[], int n, int &compCount, int &swapCount);
-void selectionSort(int arr[], int n, int &compCount, int &swapCount);
-void insertionSort(int arr[], int n, int &compCount, int &swapCount);
+void exchangeSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount);
+void selectionSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount);
+void insertionSort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount);
 
 // Alexa Heapsort
 
@@ -59,6 +59,6 @@ struct heap
     int heapsize; // heapsize only takes the values 0 to n
 };
 
-void heapsortAlexa(int n, heap &H, int &compare_count, int &swap_count);
+void heapsortAlexa(int n, heap &H, uint64_t &compare_count, uint64_t &swap_count);
 
 #endif

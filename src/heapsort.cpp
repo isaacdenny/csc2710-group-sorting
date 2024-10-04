@@ -1,6 +1,6 @@
 #include "sorts.h"
 
-void heapify(int arr[], int n, int i, int &compCount, int &swapCount)
+void heapify(int arr[], int n, int i, uint64_t &compCount, uint64_t &swapCount)
 {
     // get largest, find branches
     // check if branches are larger, if so, swap and recurse with that index
@@ -33,7 +33,7 @@ void heapify(int arr[], int n, int i, int &compCount, int &swapCount)
     }
 }
 
-void heapsort(int arr[], int n, int &compCount, int &swapCount)
+void heapsort(int arr[], int n, uint64_t &compCount, uint64_t &swapCount)
 {
     // iterate through array backwards to depth-wise heapify
     // swap the first element with current element and re-heapify

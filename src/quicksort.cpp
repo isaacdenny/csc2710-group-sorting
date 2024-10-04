@@ -1,6 +1,6 @@
 #include "sorts.h"
 
-void qspartition(int arr[], int low, int high, int &pivotpoint, int &compCount, int &swapCount)
+void qspartition(int arr[], int low, int high, int &pivotpoint, uint64_t &compCount, uint64_t &swapCount)
 {
     int pivotitem = arr[low]; // Choose the first element as the pivot
     int j = low;              // Index of the last element in the low partition
@@ -24,7 +24,7 @@ void qspartition(int arr[], int low, int high, int &pivotpoint, int &compCount, 
     swapCount++; // Increment the swap count
 }
 
-void quicksort(int arr[], int low, int high, int &compCount, int &swapCount)
+void quicksort(int arr[], int low, int high, uint64_t &compCount, uint64_t &swapCount)
 {
     int pivotpoint; // Index of the pivot element
     if (high > low)

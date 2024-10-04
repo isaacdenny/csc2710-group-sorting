@@ -21,12 +21,12 @@
 using namespace std;
 
 // Prototypes
-void siftdown(heap &H, int i, int &compare_count, int &swap_count);
-int root(heap &H, int &compare_count, int &swap_count);
-void removekeys(int n, heap &H, int S[], int &compare_count, int &swap_count);
-void makeheap(int n, heap &H, int &compare_count, int &swap_count);
+void siftdown(heap &H, int i, uint64_t &compare_count, uint64_t &swap_count);
+int root(heap &H, uint64_t &compare_count, uint64_t &swap_count);
+void removekeys(int n, heap &H, int S[], uint64_t &compare_count, uint64_t &swap_count);
+void makeheap(int n, heap &H, uint64_t &compare_count, uint64_t &swap_count);
 
-void siftdown(heap &H, int i, int &compare_count, int &swap_count)
+void siftdown(heap &H, int i, uint64_t &compare_count, uint64_t &swap_count)
 {
     int parent, largerChild;
     int siftkey;
@@ -63,7 +63,7 @@ void siftdown(heap &H, int i, int &compare_count, int &swap_count)
     H.S[parent] = siftkey;
 } // end siftdown
 
-int root(heap &H, int &compare_count, int &swap_count)
+int root(heap &H, uint64_t &compare_count, uint64_t &swap_count)
 {
     int keyout;
 
@@ -75,7 +75,7 @@ int root(heap &H, int &compare_count, int &swap_count)
     return keyout;
 } // end root
 
-void removekeys(int n, heap &H, int S[], int &compare_count, int &swap_count)
+void removekeys(int n, heap &H, int S[], uint64_t &compare_count, uint64_t &swap_count)
 {
     for (int i = n - 1; i >= 0; i--)
     {
@@ -83,7 +83,7 @@ void removekeys(int n, heap &H, int S[], int &compare_count, int &swap_count)
     }
 } // end removekeys
 
-void makeheap(int n, heap &H, int &compare_count, int &swap_count)
+void makeheap(int n, heap &H, uint64_t &compare_count, uint64_t &swap_count)
 {
     H.heapsize = n;
 
@@ -93,7 +93,7 @@ void makeheap(int n, heap &H, int &compare_count, int &swap_count)
     }
 } // end makeheap
 
-void heapsortAlexa(int n, heap &H, int &compare_count, int &swap_count)
+void heapsortAlexa(int n, heap &H, uint64_t &compare_count, uint64_t &swap_count)
 {
     makeheap(n, H, compare_count, swap_count);
     removekeys(n, H, H.S, compare_count, swap_count);
