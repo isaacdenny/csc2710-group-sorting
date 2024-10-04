@@ -64,10 +64,10 @@ We needed to make sure our program handled the dataset in memory correctly:
 
 ## 4. Results
 
-![Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTING-ALL.png?raw=true)
+![Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/SORTED-ALL.png?raw=true)
 ![Reverse Sorted Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/REVERSE-ALL.png?raw=true)
 ![Random Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/RANDOM-ALL.png?raw=true)
-![Duplicates Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATES-ALL.png?raw=true)
+![Duplicates Dataset Results](https://github.com/isaacdenny/csc2710-group-sorting/blob/main/results/DUPLICATE-ALL.png?raw=true)
 
 ## 5. Questions To Answer In Presentation
 
