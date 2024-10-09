@@ -35,7 +35,7 @@ The group sorting project for CSC2710
 
 ### What dataset? (need 4)
 
-- [x] Almost sorted
+- [x] Sorted
 - [x] Reverse sorted
 - [x] Randomly distributed
 - [x] Many Duplicates
